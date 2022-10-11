@@ -1,4 +1,4 @@
-import {View, Text, ScrollView} from 'react-native';
+import {View, Text, ScrollView, Image} from 'react-native';
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {Routes} from '../../routes';
@@ -8,30 +8,40 @@ const Drawer = createDrawerNavigator();
 const DrawerContent = props => {
   return (
     <>
-      {/* <View style={styles.imgbox}>
-          <Image
-            style={styles.image}
-            source={{
-              uri: 'https://codersera.com/blog/wp-content/uploads/2020/11/React-Learning-Path-1.png',
-            }}
-          />
-          <Text style={styles.numbertxt}>9462656067</Text>
-        </View> */}
-      <ScrollView
-      //    contentContainerStyle={styles.scollcontent}
-      >
+      <ScrollView contentContainerStyle={{paddingBottom: 100}}>
+        <View style={{flexDirection: 'row', padding: 20, alignItems: 'center'}}>
+          <View
+            style={{
+              height: 50,
+              width: 50,
+              borderWidth: 1,
+              marginRight: 10,
+            }}></View>
+          <Text style={{fontSize: 16, fontWeight: 'medium', color: '#222222'}}>
+            Hello, Radhika
+          </Text>
+          <Text style={{fontSize: 20}}> {'>'}</Text>
+        </View>
         {Routes.map(it => {
           return (
             <View
-            //   style={[
-            //     styles.routesbox,
-            //     {borderBottomWidth: Routes[Routes.length - 1] == it ? 2 : null},
-            //   ]}
-            >
-              {/* <Text style={styles.icon}>{it.icon}</Text> */}
+              style={{
+                flexDirection: 'row',
+                paddingHorizontal: 20,
+                paddingVertical: 15,
+                alignItems: 'center',
+                borderTopWidth: 1,
+                borderColor: '#edeff499',
+                backgroundColor: 'white',
+              }}>
+              <Image source={it.icon} style={{height: 35, width: 35}} />
               <Text
-              //    style={styles.labeltxt}
-              >
+                style={{
+                  marginLeft: 15,
+                  fontSize: 15,
+                  color: '#222222',
+                  fontWeight: 'bold',
+                }}>
                 {it.label}
               </Text>
             </View>
