@@ -8,7 +8,7 @@ const SettingDetails = props => {
       <ScrollView>
         <ImageBackground
           style={{padding: 15}}
-          source={require('../../assets/images/login-bg.png')}>
+          source={require('../../../assets/images/login-bg.png')}>
           <View
             style={{
               flexDirection: 'row',

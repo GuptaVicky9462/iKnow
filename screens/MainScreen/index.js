@@ -3,9 +3,13 @@ import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {Routes} from '../../routes';
 import HomeStack from './HomeStack';
+import {useNavigation} from '@react-navigation/native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
+import Alert from '../Alerts';
 
 const Drawer = createDrawerNavigator();
 const DrawerContent = props => {
+  const navigation = useNavigation();
   return (
     <>
       <ScrollView contentContainerStyle={{paddingBottom: 100}}>
@@ -20,11 +24,12 @@ const DrawerContent = props => {
           <Text style={{fontSize: 16, fontWeight: 'medium', color: '#222222'}}>
             Hello, Radhika
           </Text>
-          <Text style={{fontSize: 20}}> {'>'}</Text>
+          <Text style={{fontSize: 20}}>{' >'}</Text>
         </View>
         {Routes.map(it => {
           return (
-            <View
+            <TouchableOpacity
+              onPress={() => navigation.navigate(it.route, {item: it})}
               style={{
                 flexDirection: 'row',
                 paddingHorizontal: 20,
@@ -44,7 +49,7 @@ const DrawerContent = props => {
                 }}>
                 {it.label}
               </Text>
-            </View>
+            </TouchableOpacity>
           );
         })}
       </ScrollView>
@@ -63,6 +68,7 @@ export default function MainScreen() {
         header: () => false,
       }}>
       <Drawer.Screen name="HomeStack" component={HomeStack} />
+      <Drawer.Screen name="Alert" component={Alert} />
     </Drawer.Navigator>
   );
 }
