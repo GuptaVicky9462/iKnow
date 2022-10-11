@@ -1,0 +1,15 @@
+export const image = {
+  periodHomeBanner: require('./period-home-banner.png'),
+  periodCycle: require('../../assets/images/period-cycle.png'),
+  ovulation: require('../../assets/images/Ovulation.png'),
+  UTI: require('../../assets/images/UTI.png'),
+  menopause: require('../../assets/images/Menopause.png'),
+  support: require('../../assets/images/support.png'),
+  bannerhome1: require('../../assets/images/banner-home-1.jpg'),
+  bannerhome2: require('../../assets/images/banner-home-2.jpg'),
+  home: require('../../assets/images/home.png'),
+  profile: require('../../assets/images/profile.png'),
+  setting: require('../../assets/images/setting.png'),
+  about: require('../../assets/images/about.png'),
+  logout: require('../../assets/images/logout.png'),
+};
