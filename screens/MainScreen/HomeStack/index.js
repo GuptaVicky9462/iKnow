@@ -2,22 +2,19 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {useNavigation} from '@react-navigation/native';
 import Home from '../../../screens/Home';
+import Setting from '../../Setting';
+import Profile from '../../Profile';
+import Header from './Header';
 const Tab = createBottomTabNavigator();
 
-const Setting = () => {
+const Calendar = () => {
   return (
     <>
-      <Text>jiu</Text>
+      <Text>Calendar</Text>
     </>
   );
 };
-const Profile = () => {
-  return (
-    <>
-      <Text>jiu</Text>
-    </>
-  );
-};
+
 const HomeStack = props => {
   const navigation = useNavigation();
 
@@ -34,7 +31,8 @@ const HomeStack = props => {
         //   padding: 0,
         //   position: 'absolute',
         // },
-        headerShown: false,
+        headerShow: true,
+        header: p => <Header />,
         tabBarLabel: () => {
           return null;
         },
@@ -44,6 +42,13 @@ const HomeStack = props => {
         component={Home}
         options={{
           tabBarLabel: 'HOME',
+        }}
+      />
+      <Tab.Screen
+        name="Calendar"
+        component={Calendar}
+        options={{
+          tabBarLabel: 'CALANDAR',
         }}
       />
       <Tab.Screen

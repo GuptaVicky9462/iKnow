@@ -4,13 +4,14 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity,
+  StyleSheet,
 } from 'react-native';
 import React, {useState} from 'react';
 import {TextInput} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
-
+import OTPInputView from '@twotalltotems/react-native-otp-input';
 const Otp = () => {
-  const [text, setText] = useState('');
+  const [code, setCode] = useState('');
   const navigation = useNavigation();
   return (
     <ImageBackground
@@ -32,7 +33,7 @@ const Otp = () => {
         style={{
           color: 'white',
           fontSize: 16,
-          paddingBottom: 20,
+          paddingBottom: 30,
           justifyContent: 'center',
           alignItems: 'center',
           paddingHorizontal: 25,
@@ -52,21 +53,19 @@ const Otp = () => {
           Please enter it below.
         </Text>
       </View>
-      {/* <TextInput
-        label="Enter Your Mobile Number"
-        value={text}
-        mode="outlined"
-        outlineColor="white"
-        style={{
-          width: '80%',
-          alignSelf: 'center',
-          backgroundColor: '#ec187c',
-        }}
-        activeOutlineColor="white"
-        onChangeText={text => setText(text)}
-      /> */}
+      <OTPInputView
+        style={{width: '70%', height: 50, alignSelf: 'center'}}
+        pinCount={4}
+        code={code} //You can supply this prop or not. The component will be used as a controlled / uncontrolled component respectively.
+        onCodeChanged={code => setCode(code)}
+        // codeInputFieldStyle={styles.underlineStyleBase}
+        codeInputHighlightStyle={styles.underlineStyleHighLighted}
+        // onCodeFilled={code => {
+        //   console.log(`Code is ${code}, you are good to go!`);
+        // }}
+      />
       <TouchableOpacity
-        onPress={() => navigation.navigate('Otp')}
+        onPress={() => navigation.navigate('CompleteProfile')}
         style={{
           width: '80%',
           alignSelf: 'center',
@@ -83,3 +82,26 @@ const Otp = () => {
   );
 };
 export default Otp;
+
+const styles = StyleSheet.create({
+  borderStyleBase: {
+    width: 30,
+    height: 45,
+  },
+
+  borderStyleHighLighted: {
+    borderColor: '#03DAC6',
+  },
+
+  underlineStyleBase: {
+    width: 30,
+    height: 45,
+    borderWidth: 0,
+    borderBottomWidth: 1,
+  },
+
+  underlineStyleHighLighted: {
+    borderColor: '#03DAC6',
+    borderWidth: 2,
+  },
+});
