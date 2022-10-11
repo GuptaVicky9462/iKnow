@@ -9,8 +9,9 @@ import Otp from './screens/Otp';
 import HomeStack from './screens/MainScreen/HomeStack';
 import CompleteProfile from './screens/CompleteProfile';
 import Term_Condition from './screens/Term_Condition';
-import Setting from './screens/Setting';
-import SettingDetails from './screens/SettingDetails';
+import SettingDetails from './screens/Common/SettingDetails';
+import GetStarted from './screens/Common/GetStarted';
+import TrackCycle from './screens/Common/TrackCycle';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +21,7 @@ export default function App() {
   }, []);
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
+      <Stack.Navigator initialRouteName="MainScreen">
         <Stack.Screen
           name="Login"
           component={Login}
@@ -47,20 +48,25 @@ export default function App() {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="Setting"
-          component={Setting}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
           name="SettingDetails"
           component={SettingDetails}
           options={{headerShown: false}}
         />
-        {/* <Stack.Screen
+        <Stack.Screen
           name="MainScreen"
           component={props => <MainScreen {...props} />}
           options={{headerShown: false}}
-        /> */}
+        />
+        <Stack.Screen
+          name="GetStarted"
+          component={GetStarted}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="TrackCycle"
+          component={TrackCycle}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

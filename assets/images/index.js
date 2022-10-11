@@ -12,4 +12,7 @@ export const image = {
   setting: require('../../assets/images/setting.png'),
   about: require('../../assets/images/about.png'),
   logout: require('../../assets/images/logout.png'),
+  loginbg: require('../../assets/images/login-bg.png'),
+  ovulationicon: require('../../assets/images/ovulation-icon.png'),
+  calanderreport: require('../../assets/images/calander-report.png'),
 };

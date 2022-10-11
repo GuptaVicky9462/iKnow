@@ -5,15 +5,8 @@ import Home from '../../../screens/Home';
 import Setting from '../../Setting';
 import Profile from '../../Profile';
 import Header from './Header';
+import Calendar from '../../Calandar';
 const Tab = createBottomTabNavigator();
-
-const Calendar = () => {
-  return (
-    <>
-      <Text>Calendar</Text>
-    </>
-  );
-};
 
 const HomeStack = props => {
   const navigation = useNavigation();
