@@ -73,10 +73,10 @@ const Setting = () => {
 
   return (
     <>
-      <ScrollView>
-        <ImageBackground
-          style={{paddingHorizontal: 15}}
-          source={require('../../assets/images/login-bg.png')}>
+      <ImageBackground
+        style={{flex: 1}}
+        source={require('../../assets/images/login-bg.png')}>
+        <ScrollView style={{paddingHorizontal: 10}}>
           <View style={{paddingVertical: 10}}>
             <Text style={{fontSize: 21, fontWeight: '700', color: '#222222'}}>
               Settings
@@ -202,8 +202,8 @@ const Setting = () => {
               );
             })}
           </View>
-        </ImageBackground>
-      </ScrollView>
+        </ScrollView>
+      </ImageBackground>
     </>
   );
 };

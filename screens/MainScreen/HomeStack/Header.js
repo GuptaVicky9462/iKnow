@@ -24,7 +24,9 @@ export default function Header() {
             style={{height: 50, width: 90, marginLeft: 15}}
           />
         </View>
-        <Ionicons size={25} name="notifications-outline" />
+        <TouchableOpacity onPress={() => navigation.navigate('Alert')}>
+          <Ionicons size={25} name="notifications-outline" />
+        </TouchableOpacity>
       </View>
     </View>
   );

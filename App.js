@@ -11,6 +11,7 @@ import CompleteProfile from './screens/CompleteProfile';
 import Term_Condition from './screens/Term_Condition';
 import Setting from './screens/Setting';
 import SettingDetails from './screens/SettingDetails';
+import Alert from './screens/Alerts';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +21,7 @@ export default function App() {
   }, []);
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
+      <Stack.Navigator initialRouteName="MainScreen">
         <Stack.Screen
           name="Login"
           component={Login}
@@ -56,11 +57,16 @@ export default function App() {
           component={SettingDetails}
           options={{headerShown: false}}
         />
-        {/* <Stack.Screen
+        <Stack.Screen
           name="MainScreen"
           component={props => <MainScreen {...props} />}
           options={{headerShown: false}}
-        /> */}
+        />
+        <Stack.Screen
+          name="Alert"
+          component={Alert}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
