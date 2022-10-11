@@ -9,6 +9,7 @@ import Otp from './screens/Otp';
 import HomeStack from './screens/MainScreen/HomeStack';
 import CompleteProfile from './screens/CompleteProfile';
 import Term_Condition from './screens/Term_Condition';
+import Alert from './screens/Alerts';
 import SettingDetails from './screens/Common/SettingDetails';
 import GetStarted from './screens/Common/GetStarted';
 import TrackCycle from './screens/Common/TrackCycle';
@@ -55,6 +56,11 @@ export default function App() {
         <Stack.Screen
           name="MainScreen"
           component={props => <MainScreen {...props} />}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Alert"
+          component={Alert}
           options={{headerShown: false}}
         />
         <Stack.Screen

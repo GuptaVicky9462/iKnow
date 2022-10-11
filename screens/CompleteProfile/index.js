@@ -24,16 +24,15 @@ const data = [
 const CompleteProfile = () => {
   const navigation = useNavigation();
   return (
-    <ScrollView style={{flex: 1}}>
-      <ImageBackground
-        source={require('../../assets/images/login-bg.png')}
-        resizeMode="cover"
-        style={{
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'white',
-          paddingVertical: 20,
-        }}>
+    <ImageBackground
+      source={require('../../assets/images/login-bg.png')}
+      resizeMode="cover"
+      style={{
+        flex: 1,
+        backgroundColor: 'white',
+        paddingVertical: 20,
+      }}>
+      <ScrollView style={{flex: 1}}>
         <View style={{alignSelf: 'center', paddingVertical: 20}}>
           <Image
             source={require('../../assets/images/logo.png')}
@@ -77,8 +76,8 @@ const CompleteProfile = () => {
           }}>
           <Text style={{fontSize: 18, color: 'white'}}>SUBMIT</Text>
         </TouchableOpacity>
-      </ImageBackground>
-    </ScrollView>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 export default CompleteProfile;
