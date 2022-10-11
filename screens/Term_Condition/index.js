@@ -3,11 +3,11 @@ import {
   Text,
   Image,
   ImageBackground,
+  ScrollView,
   TouchableOpacity,
 } from 'react-native';
 import React, {useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
-import {ScrollView} from 'react-native-gesture-handler';
 // import CheckBox from 'react-native-check-box'
 
 const data = [

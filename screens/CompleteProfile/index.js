@@ -3,12 +3,12 @@ import {
   Text,
   Image,
   ImageBackground,
+  ScrollView,
   TouchableOpacity,
 } from 'react-native';
 import React, {useState} from 'react';
 import {TextInput} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
-import {ScrollView} from 'react-native-gesture-handler';
 import CustomInput from '../Common/CustomInput';
 
 const data = [

@@ -13,6 +13,8 @@ import Alert from './screens/Alerts';
 import SettingDetails from './screens/Common/SettingDetails';
 import GetStarted from './screens/Common/GetStarted';
 import TrackCycle from './screens/Common/TrackCycle';
+import BlogDetails from './screens/Common/BlogDetails';
+import AboutUs from './screens/AboutUs';
 
 const Stack = createNativeStackNavigator();
 
@@ -71,6 +73,16 @@ export default function App() {
         <Stack.Screen
           name="TrackCycle"
           component={TrackCycle}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="BlogDetails"
+          component={BlogDetails}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="AboutUs"
+          component={AboutUs}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

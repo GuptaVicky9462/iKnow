@@ -53,21 +53,25 @@ const ReportsData = [
     image: image.periodCycle,
     name: 'Track Cycle',
     date: '12 Aug 2022',
+    title: 'Track Cycle Reports',
   },
   {
     image: image.ovulation,
     name: 'Ovulation Testing',
     date: '10 Aug 2022',
+    title: 'Ovulation Reports',
   },
   {
     image: image.UTI,
     name: 'UTI Detection',
     date: '15 Aug 2022',
+    title: 'UTI Reports',
   },
   {
     image: image.menopause,
     name: 'menopause',
     date: '15 Aug 2022',
+    title: 'Menopause Reports',
   },
 ];
 export default function Home() {
@@ -232,6 +236,7 @@ export default function Home() {
             flexDirection: 'row',
             flexWrap: 'wrap',
             width: '100%',
+            paddingHorizontal: 5,
           }}>
           {[0, 1, 2, 4].map((item, index) => {
             return (
