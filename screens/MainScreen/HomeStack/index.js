@@ -6,6 +6,11 @@ import Setting from '../../Setting';
 import Profile from '../../Profile';
 import Header from './Header';
 import Calendar from '../../Calandar';
+import Feather from 'react-native-vector-icons/Feather';
+import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
 const Tab = createBottomTabNavigator();
 
 const HomeStack = props => {
@@ -26,13 +31,30 @@ const HomeStack = props => {
         component={Home}
         options={{
           tabBarLabel: 'HOME',
+          tabBarActiveTintColor: '#F76F44',
+          tabBarIcon: ({focused}) => (
+            <Feather
+              name="home"
+              size={20}
+              color={focused ? '#F76F44' : 'black'}
+            />
+          ),
         }}
       />
       <Tab.Screen
         name="Calendar"
         component={Calendar}
         options={{
-          tabBarLabel: 'CALANDAR',
+          tabBarLabel: 'CALENDAR',
+          tabBarActiveTintColor: '#F76F44',
+
+          tabBarIcon: ({focused}) => (
+            <EvilIcons
+              name="calendar"
+              color={focused ? '#F76F44' : 'black'}
+              size={30}
+            />
+          ),
         }}
       />
       <Tab.Screen
@@ -40,6 +62,15 @@ const HomeStack = props => {
         component={Profile}
         options={{
           tabBarLabel: 'PROFILE',
+          tabBarActiveTintColor: '#F76F44',
+
+          tabBarIcon: ({focused}) => (
+            <MaterialCommunityIcons
+              name="account-outline"
+              color={focused ? '#F76F44' : 'black'}
+              size={30}
+            />
+          ),
         }}
       />
       <Tab.Screen
@@ -47,6 +78,15 @@ const HomeStack = props => {
         component={Setting}
         options={{
           tabBarLabel: 'SETTING',
+          tabBarActiveTintColor: '#F76F44',
+
+          tabBarIcon: ({focused}) => (
+            <AntDesign
+              name="setting"
+              color={focused ? '#F76F44' : 'black'}
+              size={25}
+            />
+          ),
         }}
       />
     </Tab.Navigator>

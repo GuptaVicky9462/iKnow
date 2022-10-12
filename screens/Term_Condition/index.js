@@ -9,6 +9,8 @@ import {
 import React, {useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {AuthContext} from '../../App';
+import CheckBox from 'react-native-check-box';
 // import CheckBox from 'react-native-check-box'
 
 const data = [
@@ -43,9 +45,11 @@ const Term_Condition = () => {
   const [text, setText] = useState('');
   const navigation = useNavigation();
   const [isChecked, setIsChecked] = useState(false);
+  const {setToken} = React.useContext(AuthContext);
+
   const saveData = async () => {
-    console.log('hihih');
-    await AsyncStorage.setItem('key', 'mainScreen');
+    let token = await AsyncStorage.setItem('routes', 'true');
+    setToken('true');
   };
   return (
     <>
@@ -53,9 +57,8 @@ const Term_Condition = () => {
         source={require('../../assets/images/login-bg.png')}
         resizeMode="cover"
         style={{
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'white',
+          flex: 1,
+          backgroundColor: '#f8f6f6',
           paddingVertical: 20,
         }}>
         <View
@@ -67,71 +70,78 @@ const Term_Condition = () => {
           <Text
             style={{
               fontSize: 22,
-              fontWeight: 'bold',
               color: 'black',
             }}>
             Term & Condition
           </Text>
         </View>
-        <View
+        {/* <View
           style={{
             margin: 20,
-            backgroundColor: 'rgba(255,255,255',
+            backgroundColor: 'rgba(255,255,255,0.7)',
             borderRadius: 10,
             padding: 10,
+          }}> */}
+        <ScrollView
+          // style={{height: '80%'}}
+          contentContainerStyle={{
+            margin: 10,
+            backgroundColor: 'rgba(255,255,255,0.5)',
+            borderRadius: 10,
+            padding: 8,
           }}>
-          <ScrollView style={{height: '80%'}}>
-            {data.map(item => {
-              return (
-                <View style={{paddingVertical: 5}}>
-                  <Text style={{fontSize: 16, fontWeight: 'bold'}}>
-                    {item.title}
-                  </Text>
-                  <Text style={{fontSize: 16, paddingVertical: 5}}>
-                    {item.description}
-                  </Text>
-                </View>
-              );
-            })}
-          </ScrollView>
-        </View>
-        <View
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            flexDirection: 'row',
-          }}>
-          {/* <CheckBox
-            // style={{flex: 1, padding: 10}}
-            onClick={() => setIsChecked(!isChecked)}
-            isChecked={isChecked}
-            // leftText={'CheckBox'}
-          /> */}
-          <Text>Box</Text>
-          <Text
+          {data.map(item => {
+            return (
+              <View style={{paddingVertical: 5}}>
+                <Text style={{fontSize: 16, color: '#222222'}}>
+                  {item.title}
+                </Text>
+                <Text style={{fontSize: 16, paddingVertical: 5}}>
+                  {item.description}
+                </Text>
+              </View>
+            );
+          })}
+        </ScrollView>
+        {/* </View> */}
+        <View style={{backgroundColor: '#f8f6f6', paddingTop: 20}}>
+          <View
             style={{
-              fontSize: 16,
-              fontWeight: 'bold',
-              color: 'black',
-              paddingLeft: 5,
+              justifyContent: 'center',
+              alignItems: 'center',
+              flexDirection: 'row',
             }}>
-            I accept the Terms & Condition.
-          </Text>
+            <CheckBox
+              onClick={() => {
+                setIsChecked(!isChecked);
+              }}
+              checkedCheckBoxColor="#0075ff"
+              isChecked={isChecked}
+            />
+            <Text
+              style={{
+                fontSize: 14,
+                color: 'black',
+                paddingLeft: 5,
+              }}>
+              I accept the Terms & Condition.
+            </Text>
+          </View>
+          <TouchableOpacity
+            onPress={() => saveData()}
+            style={{
+              minWidth: '70%',
+              alignSelf: 'center',
+              paddingVertical: 5,
+              backgroundColor: '#EC187C',
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginVertical: 20,
+              borderRadius: 50,
+            }}>
+            <Text style={{fontSize: 18, color: 'white'}}>SUBMIT</Text>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity
-          onPress={() => saveData()}
-          style={{
-            width: '50%',
-            alignSelf: 'center',
-            paddingVertical: 12,
-            backgroundColor: '#EC187C',
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginVertical: 20,
-            borderRadius: 50,
-          }}>
-          <Text style={{fontSize: 18, color: 'white'}}>SUBMIT</Text>
-        </TouchableOpacity>
       </ImageBackground>
     </>
   );
