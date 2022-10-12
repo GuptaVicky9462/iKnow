@@ -68,7 +68,7 @@ export default function MainScreen() {
         header: () => false,
       }}>
       <Drawer.Screen name="HomeStack" component={HomeStack} />
-      <Drawer.Screen name="Alert" component={Alert} />
+      {/* <Drawer.Screen name="Alert" component={Alert} /> */}
     </Drawer.Navigator>
   );
 }

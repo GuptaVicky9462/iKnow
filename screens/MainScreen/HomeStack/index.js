@@ -15,15 +15,6 @@ const HomeStack = props => {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        // tabBarStyle: {
-        //   borderTopLeftRadius: 20,
-        //   borderTopRightRadius: 20,
-        //   backgroundColor: '#212121',
-        //   height: 60,
-        //   borderTopWidth: 0,
-        //   padding: 0,
-        //   position: 'absolute',
-        // },
         headerShow: true,
         header: p => <Header />,
         tabBarLabel: () => {

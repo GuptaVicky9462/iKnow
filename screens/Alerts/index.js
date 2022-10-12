@@ -2,10 +2,10 @@ import {View, Text, ScrollView, ImageBackground} from 'react-native';
 import React from 'react';
 import Header from '../MainScreen/HomeStack/Header';
 
-export default function Alert() {
+export default function Alerts() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
 
       {/* <ScrollView contentContainerStyle={{flex: 1, padding: 20}}> */}
       <ImageBackground

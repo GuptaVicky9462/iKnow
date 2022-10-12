@@ -8,6 +8,7 @@ import {
 import React, {useState} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {ScrollView} from 'react-native-gesture-handler';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 // import CheckBox from 'react-native-check-box'
 
 const data = [
@@ -42,6 +43,10 @@ const Term_Condition = () => {
   const [text, setText] = useState('');
   const navigation = useNavigation();
   const [isChecked, setIsChecked] = useState(false);
+  const saveData = async () => {
+    console.log('hihih');
+    await AsyncStorage.setItem('key', 'mainScreen');
+  };
   return (
     <>
       <ImageBackground
@@ -114,7 +119,7 @@ const Term_Condition = () => {
           </Text>
         </View>
         <TouchableOpacity
-          onPress={() => navigation.navigate('HomeStack')}
+          onPress={() => saveData()}
           style={{
             width: '50%',
             alignSelf: 'center',
