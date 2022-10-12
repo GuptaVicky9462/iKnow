@@ -1,4 +1,3 @@
-import {View, Text} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import MainScreen from './screens/MainScreen';
 import {NavigationContainer} from '@react-navigation/native';
@@ -6,16 +5,9 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {LogBox} from 'react-native';
 import Login from './screens/Login';
 import Otp from './screens/Otp';
-import HomeStack from './screens/MainScreen/HomeStack';
 import CompleteProfile from './screens/CompleteProfile';
 import Term_Condition from './screens/Term_Condition';
-import Alert from './screens/Alerts';
-import SettingDetails from './screens/Common/SettingDetails';
-import GetStarted from './screens/Common/GetStarted';
-import TrackCycle from './screens/Common/TrackCycle';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import BlogDetails from './screens/Common/BlogDetails';
-import AboutUs from './screens/AboutUs';
 
 const Stack = createNativeStackNavigator();
 

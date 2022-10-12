@@ -15,6 +15,8 @@ import Alerts from '../Alerts';
 import GetStarted from '../Common/GetStarted';
 import TrackCycle from '../../screens/Common/TrackCycle';
 import MainHome from './MainHome';
+import BlogDetails from '../Common/BlogDetails';
+import AboutUs from '../AboutUs';
 
 const Stack = createNativeStackNavigator();
 
@@ -49,6 +51,16 @@ export default function Home() {
         <Stack.Screen
           name="TrackCycle"
           component={TrackCycle}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="BlogDetails"
+          component={BlogDetails}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="AboutUs"
+          component={AboutUs}
           options={{headerShown: false}}
         />
         {/* <Stack.Screen
