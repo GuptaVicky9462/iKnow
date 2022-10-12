@@ -17,4 +17,12 @@ export const image = {
   calanderreport: require('../../assets/images/calander-report.png'),
   blog: require('../../assets/images/blog.png'),
   logo: require('../../assets/images/logo.png'),
+  menstrualcycleicon: require('../../assets/images/menstrual-cycle-icon.png'),
+  menstrualcyclelengthicon: require('../../assets/images/menstrual-cycle-length-icon.png'),
+  periodstartdate: require('../../assets/images/period-start-date.png'),
+  processinggif: require('../../assets/images/PROCESSING.gif'),
+  trackcycleresult: require('../../assets/images/track-cycle-result.png'),
+  trackcycleresultjpg: require('../../assets/images/track-cycle-result.jpg'),
+  check: require('../../assets/images/check.png'),
+  camera: require('../../assets/images/camera.png'),
 };
