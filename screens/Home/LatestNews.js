@@ -1,14 +1,18 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
+import {image} from '../../assets/images';
 export default function LatestNews() {
+  const navigation = useNavigation();
   return (
-    <View
+    <TouchableOpacity
+      onPress={() => navigation.navigate('BlogDetails')}
       style={{
         paddingHorizontal: 8,
         width: '50%',
       }}>
       <Image
-        source={require('../../assets/images/blog.png')}
+        source={image.blog}
         style={{
           width: '100%',
           height: 200,
@@ -23,6 +27,6 @@ export default function LatestNews() {
         Consequat interdum varius sit amet mattis vulputate proin nibh nisl...
         <Text style={{color: '#EC187C'}}>Read More</Text>
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 }

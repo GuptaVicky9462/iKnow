@@ -15,4 +15,6 @@ export const image = {
   loginbg: require('../../assets/images/login-bg.png'),
   ovulationicon: require('../../assets/images/ovulation-icon.png'),
   calanderreport: require('../../assets/images/calander-report.png'),
+  blog: require('../../assets/images/blog.png'),
+  logo: require('../../assets/images/logo.png'),
 };

@@ -1,10 +1,9 @@
-import {View, Text, ScrollView, Image} from 'react-native';
+import {View, Text, ScrollView, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {Routes} from '../../routes';
 import HomeStack from './HomeStack';
 import {useNavigation} from '@react-navigation/native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import Alert from '../Alerts';
 
 const Drawer = createDrawerNavigator();

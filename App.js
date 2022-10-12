@@ -14,6 +14,8 @@ import SettingDetails from './screens/Common/SettingDetails';
 import GetStarted from './screens/Common/GetStarted';
 import TrackCycle from './screens/Common/TrackCycle';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import BlogDetails from './screens/Common/BlogDetails';
+import AboutUs from './screens/AboutUs';
 
 const Stack = createNativeStackNavigator();
 
