@@ -23,7 +23,7 @@ const UtiDetectionStep2 = () => {
           />
           <View style={{alignItems: 'center', paddingVertical: 15}}>
             <TouchableOpacity
-              onPress={() => navigation.navigate('Processing')}
+              onPress={() => navigation.navigate('UtiDetectionStep3')}
               style={{
                 width: '50%',
                 backgroundColor: '#EC187C',

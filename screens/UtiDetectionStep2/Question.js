@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React from 'react';
-import {image} from '../../../assets/images';
+import {image} from '../../assets/images';
 
 export default function Question({handleyes, questions, handleback}) {
   return (
@@ -22,17 +22,17 @@ export default function Question({handleyes, questions, handleback}) {
             padding: 15,
             paddingBottom: 40,
           }}>
-          <View
-            style={{
-              alignItems: 'center',
-              paddingVertical: 10,
-            }}>
-            <Image
-              source={questions.qimage}
-              style={{height: 120, height: 120}}
-              resizeMode="contain"
-            />
-          </View>
+          {/* <View
+              style={{
+                alignItems: 'center',
+                paddingVertical: 10,
+              }}>
+              <Image
+                source={questions.qimage}
+                style={{height: 120, height: 120}}
+                resizeMode="contain"
+              />
+            </View> */}
           <View
             style={{
               paddingVertical: 10,
@@ -40,8 +40,8 @@ export default function Question({handleyes, questions, handleback}) {
               borderRadius: 10,
               alignItems: 'center',
               justifyContent: 'center',
-              margin: 'auto',
               paddingHorizontal: '10%',
+              marginVertical: 30,
             }}>
             <Text
               style={{
@@ -69,8 +69,8 @@ export default function Question({handleyes, questions, handleback}) {
             style={{
               alignItems: 'center',
               justifyContent: 'center',
-              //   margin: 'auto',
               paddingVertical: 30,
+              paddingHorizontal: '10%',
             }}>
             <Text
               style={{
@@ -157,47 +157,47 @@ export default function Question({handleyes, questions, handleback}) {
             </TouchableOpacity>
           </View>
           {/* {[0, 1, 2, 3].map(item => {
-            return (
-              <>
-                <View
-                  style={{
-                    padding: 15,
-                    backgroundColor: 'rgba(255,255,255,0.7)',
-
-                    borderRadius: 5,
-                    marginBottom: 5,
-                  }}>
-                  <Text
+              return (
+                <>
+                  <View
                     style={{
-                      color: '#222222',
-                      fontWeight: 'bold',
-                      fontSize: 14,
+                      padding: 15,
+                      backgroundColor: 'rgba(255,255,255,0.7)',
+  
+                      borderRadius: 5,
+                      marginBottom: 5,
                     }}>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                  </Text>
-                  <Text
-                    style={{
-                      color: '#222222',
-                      fontSize: 14,
-                      marginVertical: 5,
-                    }}>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </Text>
-                  <Text
-                    style={{
-                      color: '#EC187C',
-                      fontSize: 14,
-                      fontWeight: 'bold',
-                    }}>
-                    5 Sep, 2022
-                  </Text>
-                </View>
-              </>
-            );
-          })} */}
+                    <Text
+                      style={{
+                        color: '#222222',
+                        fontWeight: 'bold',
+                        fontSize: 14,
+                      }}>
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </Text>
+                    <Text
+                      style={{
+                        color: '#222222',
+                        fontSize: 14,
+                        marginVertical: 5,
+                      }}>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                      occaecat cupidatat non proident, sunt in culpa qui officia
+                      deserunt mollit anim id est laborum.
+                    </Text>
+                    <Text
+                      style={{
+                        color: '#EC187C',
+                        fontSize: 14,
+                        fontWeight: 'bold',
+                      }}>
+                      5 Sep, 2022
+                    </Text>
+                  </View>
+                </>
+              );
+            })} */}
         </ScrollView>
       </ImageBackground>
     </>

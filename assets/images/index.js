@@ -30,4 +30,8 @@ export const image = {
   trackcycleresultjpg: require('../../assets/images/track-cycle-result.jpg'),
   check: require('../../assets/images/check.png'),
   camera: require('../../assets/images/camera.png'),
+  share: require('../../assets/images/share.png'),
+  ovelationkitresult1: require('../../assets/images/ovelation-kit-result1.png'),
+  check1: require('../../assets/images/check-1.png'),
+  cross1: require('../../assets/images/cross-1.png'),
 };
