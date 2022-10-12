@@ -8,6 +8,8 @@ import TrackCycle from '../../screens/Common/TrackCycle';
 import MainHome from './MainHome';
 import BlogDetails from '../Common/BlogDetails';
 import AboutUs from '../AboutUs';
+import Assesment from '../Assesment';
+
 import TrackCycleStep1 from '../TrackCycleStep1';
 import TrackCycleStep2 from '../TrackCycleStep2';
 import TrackCycleStep3 from '../TrackCycleStep3';
@@ -25,10 +27,15 @@ const Stack = createNativeStackNavigator();
 export default function Home() {
   return (
     <>
-      <Stack.Navigator initialRouteName="MainHome">
+      <Stack.Navigator initialRouteName="Assesment">
         <Stack.Screen
           name="MainHome"
           component={MainHome}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Assesment"
+          component={Assesment}
           options={{headerShown: false}}
         />
 
