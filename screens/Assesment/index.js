@@ -2,6 +2,8 @@ import {View, Text, useState} from 'react-native';
 import React from 'react';
 import Question from '../Common/Question';
 import {image} from '../../assets/images';
+import {useNavigation} from '@react-navigation/native';
+
 const questions = [
   {
     qtext: 'Have your experienced Irrregular cycle?',
@@ -67,12 +69,15 @@ const questions = [
 ];
 
 export default function Assesment() {
+  const navigation = useNavigation();
   const [activeq, setActiveq] = React.useState(0);
   const handleyes = () => {
     if (questions.length - 1 > activeq) {
       setActiveq(prev => {
         return prev + 1;
       });
+    } else {
+      navigation.navigate('MenopauseStep3');
     }
   };
 
@@ -83,6 +88,8 @@ export default function Assesment() {
       setActiveq(prev => {
         return prev - 1;
       });
+    } else {
+      navigation.goBack();
     }
   };
   return (

@@ -26,6 +26,13 @@ import UtiDashbord from '../UtiDashbord';
 import MenopauseStep1 from '../MenopauseStep1';
 import MenopauseStep2 from '../MenopauseStep2';
 import MenopauseDashbord from '../MenopauseDashbord';
+import UtiDetectionStep3 from '../UtiDetectionStep2/UtiDetectionStep3';
+import MenopauseStep3 from '../MenopauseStep2/MenopauseStep3';
+import MenopauseStep4 from '../MenopauseStep2/MenopauseStep4';
+import MenopauseResult from '../MenopauseStep2/MenopauseResult';
+import UtiDetectionStep4 from '../UtiDetectionStep2/UtiDetectionStep4';
+import UtiDetectionStep5 from '../UtiDetectionStep2/UtiDetectionStep5';
+import UtiResult from '../UtiDetectionStep2/Utiresult';
 const Stack = createNativeStackNavigator();
 
 export default function Home() {
@@ -99,13 +106,38 @@ export default function Home() {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="OvulationTestStep3"
-          component={OvulationTestStep3}
+          name="MenopauseStep3"
+          component={MenopauseStep3}
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="OvulationTestStep4"
-          component={OvulationTestStep4}
+          name="MenopauseStep4"
+          component={MenopauseStep4}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="UtiDetectionStep3"
+          component={UtiDetectionStep3}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="UtiDetectionStep4"
+          component={UtiDetectionStep4}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="UtiDetectionStep5"
+          component={UtiDetectionStep5}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="UtiResult"
+          component={UtiResult}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="MenopauseResult"
+          component={MenopauseResult}
           options={{headerShown: false}}
         />
         <Stack.Screen
