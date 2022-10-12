@@ -8,9 +8,15 @@ import {
 } from 'react-native';
 import React from 'react';
 import {image} from '../../../assets/images/index';
+import {useNavigation} from '@react-navigation/native';
 
-export default function GetStarted(props) {
-  const details = props.route.params.item;
+export default function GetStarted({
+  icon = null,
+  title = 'Title',
+  description = 'Description',
+  navigate = '',
+}) {
+  const navigation = useNavigation();
   return (
     <>
       <ImageBackground style={{flex: 1, padding: 15}} source={image.loginbg}>
@@ -24,7 +30,7 @@ export default function GetStarted(props) {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Image style={{width: 160, height: 160}} source={details.icon} />
+            <Image style={{width: 160, height: 160}} source={icon} />
           </View>
           <View
             style={{
@@ -35,7 +41,7 @@ export default function GetStarted(props) {
               marginBottom: 16,
             }}>
             <Text style={{fontSize: 16, fontWeight: '700', color: '#222222'}}>
-              {details.title}
+              {title}
             </Text>
           </View>
           <View
@@ -45,10 +51,11 @@ export default function GetStarted(props) {
               paddingHorizontal: 15,
             }}>
             <Text style={{fontSize: 16, color: '#222222', textAlign: 'center'}}>
-              {details.description}
+              {description}
             </Text>
           </View>
           <TouchableOpacity
+            onPress={() => navigation.navigate(navigate)}
             style={{
               backgroundColor: '#EC187C',
               borderRadius: 15,
