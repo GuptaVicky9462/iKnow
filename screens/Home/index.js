@@ -32,7 +32,7 @@ import MenopauseStep4 from '../MenopauseStep2/MenopauseStep4';
 import MenopauseResult from '../MenopauseStep2/MenopauseResult';
 import UtiDetectionStep4 from '../UtiDetectionStep2/UtiDetectionStep4';
 import UtiDetectionStep5 from '../UtiDetectionStep2/UtiDetectionStep5';
-import UtiResult from '../UtiDetectionStep2/Utiresult';
+import UtiResult from '../UtiDetectionStep2/UtiResult';
 const Stack = createNativeStackNavigator();
 
 export default function Home() {
@@ -103,6 +103,16 @@ export default function Home() {
         <Stack.Screen
           name="OvulationTestStep2"
           component={OvulationTestStep2}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="OvulationTestStep3"
+          component={OvulationTestStep3}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="OvulationTestStep4"
+          component={OvulationTestStep4}
           options={{headerShown: false}}
         />
         <Stack.Screen

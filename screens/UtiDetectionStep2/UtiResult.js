@@ -8,19 +8,8 @@ import {
 } from 'react-native';
 import React from 'react';
 import {image} from '../../assets/images';
+import LatestNews from '../Home/LatestNews';
 
-const data = [
-  {
-    icon: image.check,
-    name: 'Your next period is likely to start',
-    time: '12 Sep 2022',
-  },
-  {
-    icon: image.check,
-    name: 'Your fertile period for this month is to check with ovulation testing strips between',
-    time: '19 Aug 2022 to 29 Aug 2022',
-  },
-];
 export default function UtiResult(props) {
   return (
     <>
@@ -38,19 +27,29 @@ export default function UtiResult(props) {
           <View style={{paddingVertical: 10, alignItems: 'center'}}>
             <Image
               source={image.ovelationkitresult1}
-              style={{height: 200, width: 250}}
+              style={{height: 250, width: 300}}
               resizeMode="contain"
             />
           </View>
-          <Text>
-            Your menopause could be starting and you should consult your
-            physician
+          <Text style={{paddingVertical:10}}>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </Text>
+          <Text style={{paddingVertical:10}}>
+            Tellus in hac habitasse platea dictumst vestibulum rhoncus est.
+            Interdum varius sit amet mattis vulputate enim nulla aliquet
+            porttitor. Egestas diam in arcu cursus euismod quis viverra nibh.
+            Posuere ac ut consequat semper viverra nam libero justo laoreet.
+            Accumsan sit amet nulla facilisi. Et sollicitudin ac orci phasellus
+            egestas tellus.
           </Text>
           <View
             style={{
               paddingVertical: 20,
               alignItems: 'center',
-              // flexDirection: 'row',
             }}>
             <TouchableOpacity
               style={{
@@ -63,7 +62,7 @@ export default function UtiResult(props) {
                 flexDirection: 'row',
                 justifyContent: 'center',
               }}>
-              <Text style={{fontSize: 16}}>SHARE RESULT </Text>
+              <Text style={{fontSize: 16}}>SHARE RESULT</Text>
               <Image
                 source={image.share}
                 style={{height: 30, width: 30}}
@@ -83,7 +82,7 @@ export default function UtiResult(props) {
             <Text style={{fontSize: 16, color: 'white'}}>RETAKE TEST</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => props.navigation.navigate('UtiDashBoard')}
+            onPress={() => props.navigation.navigate('UtiDashbord')}
             style={{
               backgroundColor: '#ec187c',
               alignItems: 'center',
@@ -92,71 +91,9 @@ export default function UtiResult(props) {
               marginVertical: 20,
               borderRadius: 15,
             }}>
-            <Text style={{fontSize: 16, color: 'white'}}>UTI DASHBOARD</Text>
+            <Text style={{fontSize: 16, color: 'white'}}>UTI DASHBORD</Text>
           </TouchableOpacity>
-          {/* <View
-              style={{
-                alignItems: 'center',
-              }}>
-              <Image
-                style={{width: 150, height: 150}}
-                source={image.trackcycleresult}
-              />
-            </View>
-            {data?.map(element => {
-              return (
-                <TouchableOpacity
-                  key={Math.floor(Math.random() * 199998)}
-                  style={{
-                    flexDirection: 'row',
-                    backgroundColor: 'rgba(237,239,244, 0.7)',
-                    padding: 15,
-                    borderRadius: 10,
-                    marginTop: 12,
-                    alignItems: 'center',
-                  }}>
-                  <View style={{justifyContent: 'center'}}>
-                    <Image
-                      style={{height: 50, width: 50}}
-                      source={element.icon}
-                    />
-                  </View>
-                  <View
-                    style={{
-                      paddingHorizontal: 15,
-                    }}>
-                    <Text
-                      style={{
-                        fontSize: 18,
-                        fontWeight: 'bold',
-                        color: '#EC187C',
-                      }}>
-                      {element.name}
-                    </Text>
-                    <Text
-                      numberOfLines={2}
-                      style={{
-                        fontSize: 16,
-                        paddingVertical: 5,
-                      }}>
-                      {element.time}
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              );
-            })}
-            <View>
-              <Image
-                resizeMode="contain"
-                style={{
-                  width: '100%',
-                  height: 600,
-                  borderRadius: 10,
-                  marginVertical: 20,
-                }}
-                source={image.trackcycleresultjpg}
-              />
-            </View> */}
+          <LatestNews />
         </ScrollView>
       </ImageBackground>
     </>
