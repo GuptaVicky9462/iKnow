@@ -17,6 +17,7 @@ import TrackCycle from '../../screens/Common/TrackCycle';
 import MainHome from './MainHome';
 import BlogDetails from '../Common/BlogDetails';
 import AboutUs from '../AboutUs';
+import Assesment from '../Assesment';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,10 +27,15 @@ export default function Home() {
 
   return (
     <>
-      <Stack.Navigator initialRouteName="MainHome">
+      <Stack.Navigator initialRouteName="Assesment">
         <Stack.Screen
           name="MainHome"
           component={MainHome}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Assesment"
+          component={Assesment}
           options={{headerShown: false}}
         />
 

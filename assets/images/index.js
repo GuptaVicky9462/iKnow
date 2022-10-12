@@ -17,4 +17,10 @@ export const image = {
   calanderreport: require('../../assets/images/calander-report.png'),
   blog: require('../../assets/images/blog.png'),
   logo: require('../../assets/images/logo.png'),
+  Irrregularcycle: require('../../assets/images/Irrregular-cycle.png'),
+  heavyflow: require('../../assets/images/heavy-flow.png'),
+  hotflush: require('../../assets/images/hot-flush.png'),
+  moodswings: require('../../assets/images/mood-swings.png'),
+  harmones: require('../../assets/images/harmones.png'),
+  camera: require('../../assets/images/camera.png'),
 };
