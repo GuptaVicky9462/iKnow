@@ -4,27 +4,29 @@ import {useNavigation} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SettingDetails from '../../screens/Common/SettingDetails';
 import Alerts from '../Alerts';
-import TrackCycle from '../../screens/Common/TrackCycle';
 import MainHome from './MainHome';
 import BlogDetails from '../Common/BlogDetails';
 import AboutUs from '../AboutUs';
 import Assesment from '../Assesment';
-
 import TrackCycleStep1 from '../TrackCycleStep1';
 import TrackCycleStep2 from '../TrackCycleStep2';
 import TrackCycleStep3 from '../TrackCycleStep3';
 import TrackCycleResult from '../TrackCycleResult';
+import TrackCycleDashbord from '../TrackCycleDashbord';
 import OvulationTestStep1 from '../OvulationTestStep1';
 import OvulationTestStep2 from '../OvulationTestStep2';
 import OvulationTestStep3 from '../OvulationTestStep3';
 import OvulationTestStep4 from '../OvulationTestStep4';
+import OvulationTestStep5 from '../OvulationTestStep5';
+import OvulationDashbord from '../OvulationDashbord';
+import OvulationTestResult from '../OvulationTestResult';
 import UtiDetectionStep1 from '../UtiDetectionStep1';
 import UtiDetectionStep2 from '../UtiDetectionStep2';
+import UtiDashbord from '../UtiDashbord';
 import MenopauseStep1 from '../MenopauseStep1';
 import MenopauseStep2 from '../MenopauseStep2';
+import MenopauseDashbord from '../MenopauseDashbord';
 import UtiDetectionStep3 from '../UtiDetectionStep2/UtiDetectionStep3';
-// import UtiDetectionStep4 from '../UtiDetectionStep2/UtiDetectionStep4';
-// import UtiDetectionResult from '../UtiDetectionStep2/UtiDetectionResult';
 import MenopauseStep3 from '../MenopauseStep2/MenopauseStep3';
 import MenopauseStep4 from '../MenopauseStep2/MenopauseStep4';
 import MenopauseResult from '../MenopauseStep2/MenopauseResult';
@@ -59,11 +61,6 @@ export default function Home() {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="TrackCycle"
-          component={TrackCycle}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
           name="BlogDetails"
           component={BlogDetails}
           options={{headerShown: false}}
@@ -91,6 +88,11 @@ export default function Home() {
         <Stack.Screen
           name="TrackCycleResult"
           component={TrackCycleResult}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="TrackCycleDashbord"
+          component={TrackCycleDashbord}
           options={{headerShown: false}}
         />
         <Stack.Screen
@@ -128,16 +130,29 @@ export default function Home() {
           component={UtiDetectionStep5}
           options={{headerShown: false}}
         />
-
         <Stack.Screen
           name="UtiResult"
           component={UtiResult}
           options={{headerShown: false}}
         />
-
         <Stack.Screen
           name="MenopauseResult"
           component={MenopauseResult}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="OvulationTestStep5"
+          component={OvulationTestStep5}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="OvulationTestResult"
+          component={OvulationTestResult}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="OvulationDashbord"
+          component={OvulationDashbord}
           options={{headerShown: false}}
         />
         <Stack.Screen
@@ -150,18 +165,11 @@ export default function Home() {
           component={UtiDetectionStep2}
           options={{headerShown: false}}
         />
-
-        {/* <Stack.Screen
-          name="UtiDetectionStep4"
-          component={UtiDetectionStep4}
+        <Stack.Screen
+          name="UtiDashbord"
+          component={UtiDashbord}
           options={{headerShown: false}}
-        /> */}
-        {/* <Stack.Screen
-          name="UtiDetectionResult"
-          component={UtiDetectionResult}
-          options={{headerShown: false}}
-        /> */}
-
+        />
         <Stack.Screen
           name="MenopauseStep1"
           component={MenopauseStep1}
@@ -170,6 +178,11 @@ export default function Home() {
         <Stack.Screen
           name="MenopauseStep2"
           component={MenopauseStep2}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="MenopauseDashbord"
+          component={MenopauseDashbord}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

@@ -11,7 +11,7 @@ import {image} from '../../assets/images';
 
 const data = [
   {
-    icon: image.check,
+    icon: image.ovulationicon,
     name: 'Ovulation / Fertile Days',
     time: '20 - 25 Aug 2022',
   },
@@ -31,7 +31,7 @@ export default function OvulationTestStep3(props) {
             }}>
             <Image
               style={{width: 150, height: 150}}
-              source={image.trackcycleresult}
+              source={image.ovulationtestingstep1}
             />
           </View>
           {data?.map(element => {

@@ -8,28 +8,16 @@ import {
 } from 'react-native';
 import React from 'react';
 import {image} from '../../../assets/images';
+import {useNavigation} from '@react-navigation/native';
 
-const data = [
-  {
-    name: 'Positive',
-    time: '12-Sep-2022',
-  },
-  {
-    name: 'Negative',
-    time: '12-Sep-2022',
-  },
-  {
-    name: 'Positive',
-    time: '12-Sep-2022',
-  },
-  {
-    name: 'Negative',
-    time: '12-Sep-2022',
-  },
-];
-export default function TrackCycle(props) {
-  const details = props.route.params.item;
-  console.log(details);
+export default function TrackCycle({
+  title = '',
+  icon = null,
+  data = [],
+  route,
+}) {
+  const navigation = useNavigation();
+
   return (
     <>
       <ImageBackground
@@ -48,10 +36,10 @@ export default function TrackCycle(props) {
               borderRadius: 10,
               alignItems: 'center',
             }}>
-            <View style={{width: '60%', paddingHorizontal: 5}}>
+            <View style={{flex: 3, paddingHorizontal: 5}}>
               <Text
                 style={{fontSize: 18, fontWeight: 'bold', color: '#EC187C'}}>
-                {details.title}
+                {title}
               </Text>
               <Text
                 numberOfLines={2}
@@ -59,17 +47,15 @@ export default function TrackCycle(props) {
                 Click on the below tabs to check your previous result.
               </Text>
             </View>
-            <View style={{alignItems: 'center'}}>
-              <Image
-                style={{width: 85, height: 85}}
-                source={image.ovulationicon}
-              />
+            <View style={{flex: 1, alignItems: 'center'}}>
+              <Image style={{width: 85, height: 85}} source={icon} />
             </View>
           </View>
           {data?.map(element => {
             return (
               <TouchableOpacity
                 key={Math.floor(Math.random() * 199998)}
+                onPress={() => navigation.navigate(route)}
                 style={{
                   flexDirection: 'row',
                   backgroundColor: 'rgba(237,239,244, 0.7)',

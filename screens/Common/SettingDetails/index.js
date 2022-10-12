@@ -1,14 +1,13 @@
 import React from 'react';
 import {ImageBackground, ScrollView, Text, View} from 'react-native';
+import {image} from '../../../assets/images';
 
 const SettingDetails = props => {
-  const title = props?.route?.params?.details?.title;
+  const details = props?.route?.params?.details;
   return (
     <>
       <ScrollView>
-        <ImageBackground
-          style={{padding: 15}}
-          source={require('../../../assets/images/login-bg.png')}>
+        <ImageBackground style={{padding: 15}} source={image.loginbg}>
           <View
             style={{
               flexDirection: 'row',
@@ -16,7 +15,7 @@ const SettingDetails = props => {
               paddingVertical: 10,
             }}>
             <Text style={{fontSize: 20, color: '#222222', fontWeight: '700'}}>
-              {title}
+              {details.title}
             </Text>
           </View>
           <View style={{paddingVertical: 10}}>
