@@ -18,7 +18,7 @@ const DrawerContent = props => {
       console.log('tttttt', t);
       setToken(null);
     } else {
-      navigation.navigate(it.route, {item: it});
+      navigation.navigate(data.route, {item: data});
     }
   };
   return (

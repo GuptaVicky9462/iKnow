@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import SwitchToggle from 'react-native-switch-toggle';
 import {useNavigation} from '@react-navigation/native';
+import {image} from '../../assets/images';
 
 const data = [
   {
@@ -73,9 +74,7 @@ const Setting = () => {
 
   return (
     <>
-      <ImageBackground
-        style={{flex: 1}}
-        source={require('../../assets/images/login-bg.png')}>
+      <ImageBackground style={{flex: 1}} source={image.loginbg}>
         <ScrollView style={{paddingHorizontal: 10}}>
           <View style={{paddingVertical: 10}}>
             <Text style={{fontSize: 21, fontWeight: '700', color: '#222222'}}>

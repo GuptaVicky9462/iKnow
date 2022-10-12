@@ -22,7 +22,7 @@ export default function OvulationTestStep4(props) {
             style={{
               alignItems: 'center',
             }}>
-            <Image style={{width: 150, height: 150}} source={image.camera} />
+            <Image style={{width: 200, height: 200}} source={image.camera} />
           </View>
           <View
             style={{
@@ -45,7 +45,7 @@ export default function OvulationTestStep4(props) {
           </View>
           <View style={{paddingVertical: 15, alignItems: 'center'}}>
             <TouchableOpacity
-              onPress={() => props.navigation.navigate('OvulationTestStep3')}
+              onPress={() => props.navigation.navigate('OvulationTestStep5')}
               style={{
                 width: '90%',
                 backgroundColor: '#EC187C',
