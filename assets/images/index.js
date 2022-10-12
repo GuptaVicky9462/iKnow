@@ -22,5 +22,12 @@ export const image = {
   hotflush: require('../../assets/images/hot-flush.png'),
   moodswings: require('../../assets/images/mood-swings.png'),
   harmones: require('../../assets/images/harmones.png'),
+  menstrualcycleicon: require('../../assets/images/menstrual-cycle-icon.png'),
+  menstrualcyclelengthicon: require('../../assets/images/menstrual-cycle-length-icon.png'),
+  periodstartdate: require('../../assets/images/period-start-date.png'),
+  processinggif: require('../../assets/images/PROCESSING.gif'),
+  trackcycleresult: require('../../assets/images/track-cycle-result.png'),
+  trackcycleresultjpg: require('../../assets/images/track-cycle-result.jpg'),
+  check: require('../../assets/images/check.png'),
   camera: require('../../assets/images/camera.png'),
 };
