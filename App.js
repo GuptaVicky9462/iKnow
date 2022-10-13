@@ -41,6 +41,7 @@ function App() {
     [],
   );
   const [state, dispatch] = React.useReducer(reducer, initialState);
+  const [isLoading, setIsLoading] = useState(false);
 
   const initializeApp = async () => {
     let userProfile = await AsyncStorage.getItem('routes');
@@ -49,76 +50,80 @@ function App() {
     if (userProfile) {
       dispatch({type: 'SET_TOKEN', data: userProfile});
     }
+    setIsLoading(true);
   };
   useEffect(() => {
     LogBox.ignoreAllLogs();
     initializeApp();
   }, []);
-  return (
-    <NavigationContainer>
-      <AuthContext.Provider value={authContext}>
-        <Stack.Navigator
-          initialRouteName={state.authToken ? 'MainScreen' : 'Login'}>
-          {state.authToken ? (
-            <Stack.Screen
-              name="MainScreen"
-              component={props => <MainScreen {...props} />}
-              options={{headerShown: false}}
-            />
-          ) : (
-            <>
+  if (isLoading == true) {
+    return (
+      <NavigationContainer>
+        <AuthContext.Provider value={authContext}>
+          <Stack.Navigator
+          // initialRouteName={state.authToken ? 'MainScreen' : 'Login'}
+          >
+            {state.authToken ? (
               <Stack.Screen
-                name="Login"
-                component={Login}
+                name="MainScreen"
+                component={props => <MainScreen {...props} />}
                 options={{headerShown: false}}
               />
-              <Stack.Screen
-                name="Otp"
-                component={Otp}
-                options={{headerShown: false}}
-              />
-              <Stack.Screen
-                name="CompleteProfile"
-                component={CompleteProfile}
-                options={{headerShown: false}}
-              />
-              <Stack.Screen
-                name="Term_Condition"
-                component={Term_Condition}
-                options={{headerShown: false}}
-              />
-            </>
-          )}
+            ) : (
+              <>
+                <Stack.Screen
+                  name="Login"
+                  component={Login}
+                  options={{headerShown: false}}
+                />
+                <Stack.Screen
+                  name="Otp"
+                  component={Otp}
+                  options={{headerShown: false}}
+                />
+                <Stack.Screen
+                  name="CompleteProfile"
+                  component={CompleteProfile}
+                  options={{headerShown: false}}
+                />
+                <Stack.Screen
+                  name="Term_Condition"
+                  component={Term_Condition}
+                  options={{headerShown: false}}
+                />
+              </>
+            )}
 
-          {/* <Stack.Screen
-          name="SettingDetails"
-          component={SettingDetails}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="MainScreen"
-          component={props => <MainScreen {...props} />}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Alert"
-          component={Alert}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="GetStarted"
-          component={GetStarted}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="TrackCycle"
-          component={TrackCycle}
-          options={{headerShown: false}}
-        /> */}
-        </Stack.Navigator>
-      </AuthContext.Provider>
-    </NavigationContainer>
-  );
+            {/* <Stack.Screen
+            name="SettingDetails"
+            component={SettingDetails}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="MainScreen"
+            component={props => <MainScreen {...props} />}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Alert"
+            component={Alert}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="GetStarted"
+            component={GetStarted}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="TrackCycle"
+            component={TrackCycle}
+            options={{headerShown: false}}
+          /> */}
+          </Stack.Navigator>
+        </AuthContext.Provider>
+      </NavigationContainer>
+    );
+  }
 }
 
 export {App as default, AuthContext};

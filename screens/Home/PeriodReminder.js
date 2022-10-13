@@ -12,13 +12,13 @@ export default function PeriodReminder() {
         marginVertical: 20,
       }}>
       <View>
-        <Text style={{fontSize: 16}}>Next</Text>
+        <Text style={{fontSize: 14}}>Next</Text>
         <Text
           style={{
             color: '#222222',
             marginVertical: 2,
             fontSize: 18,
-            fontWeight: 'medium',
+            fontWeight: '500',
           }}>
           Period In
         </Text>
