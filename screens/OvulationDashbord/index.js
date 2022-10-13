@@ -26,7 +26,7 @@ export default function OvulationDashbord(props) {
       data={data}
       icon={image.ovulation}
       title="OVULATION Reports"
-      route="OvulationTestResult"
+      route="OvulationConsolidatedResult"
       props={props}
     />
   );

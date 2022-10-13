@@ -70,7 +70,7 @@ export default function OvulationTestResult(props) {
           </View>
           {/*  */}
           <TouchableOpacity
-            // onPress={() => props.navigation.navigate('UtiDetectionStep3')}
+            onPress={() => props.navigation.navigate('OvulationConsolidatedResult')}
             style={{
               backgroundColor: '#ec187c',
               alignItems: 'center',
