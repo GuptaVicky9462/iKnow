@@ -5,18 +5,13 @@ import {Routes} from '../../routes';
 import HomeStack from './HomeStack';
 import {useNavigation} from '@react-navigation/native';
 import Alert from '../Alerts';
-import {AuthContext} from '../../App';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Drawer = createDrawerNavigator();
 const DrawerContent = props => {
   const navigation = useNavigation();
-  const {setToken} = React.useContext(AuthContext);
   const Logout = async data => {
     if (data.route == 'Logout') {
-      const t = await AsyncStorage.removeItem('routes');
-      console.log('tttttt', t);
-      setToken(null);
+      navigation.navigate('Logout');
     } else {
       navigation.navigate(data.route, {item: data});
     }

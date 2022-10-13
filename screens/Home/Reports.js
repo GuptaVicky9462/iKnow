@@ -73,7 +73,13 @@ export default function Reports() {
                   }}>
                   {item.name}
                 </Text>
-                <Text style={{fontSize: 14}}>Last Updated: {item.date}</Text>
+                <Text
+                  style={{
+                    fontSize: 14,
+                    color: '#777777',
+                  }}>
+                  Last Updated: {item.date}
+                </Text>
                 <Text
                   style={{fontSize: 14, color: 'black', paddingVertical: 3}}>
                   Know More

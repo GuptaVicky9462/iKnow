@@ -22,7 +22,7 @@ export default function LatestNews() {
           flexWrap: 'wrap',
           width: '100%',
         }}>
-        {[0, 1, 2, 4, 5].map((item, index) => {
+        {[0, 1, 2, 4].map((item, index) => {
           return (
             <>
               <TouchableOpacity

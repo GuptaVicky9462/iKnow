@@ -33,6 +33,10 @@ import MenopauseResult from '../MenopauseStep2/MenopauseResult';
 import UtiDetectionStep4 from '../UtiDetectionStep2/UtiDetectionStep4';
 import UtiDetectionStep5 from '../UtiDetectionStep2/UtiDetectionStep5';
 import UtiResult from '../UtiDetectionStep2/UtiResult';
+import Logout from '../Logout';
+import OvulationConsolidatedResult from '../OvulationTestStep5/OvulationConsolidatedResult';
+import OvulationQuestion2 from '../OvulationQuestion2';
+import OvulationQuestion3 from '../OvulationQuestion3/OvulationQuestion3';
 const Stack = createNativeStackNavigator();
 
 export default function Home() {
@@ -65,6 +69,27 @@ export default function Home() {
           component={BlogDetails}
           options={{headerShown: false}}
         />
+        <Stack.Screen
+          name="Logout"
+          component={Logout}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="OvulationConsolidatedResult"
+          component={OvulationConsolidatedResult}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="OvulationQuestion2"
+          component={OvulationQuestion2}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="OvulationQuestion3"
+          component={OvulationQuestion3}
+          options={{headerShown: false}}
+        />
+
         <Stack.Screen
           name="AboutUs"
           component={AboutUs}

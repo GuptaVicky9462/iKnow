@@ -18,7 +18,7 @@ export default function Shop() {
         Shop Now
       </Text>
       <ScrollView horizontal={true}>
-        {[0, 1].map((item, index) => {
+        {[0, 1, 3].map((item, index) => {
           return (
             <>
               <View
@@ -57,20 +57,19 @@ export default function Shop() {
                     color: 'black',
                     flexWrap: 'wrap',
                   }}>
-                  i-Know ovulation testing
+                  i-Know ovulation testing Strips
                 </Text>
-                <Text style={{color: 'black'}}>Strips</Text>
-                <Text style={{color: 'black'}}>₹ 549.00 ₹</Text>
-                <View style={{flexDirection: 'row'}}>
+                <Text style={{color: 'black'}}>
+                  ₹ 549.00{' '}
                   <Text
                     style={{
-                      color: 'black',
+                      color: 'grey',
                       textDecorationLine: 'line-through',
                     }}>
-                    650.00
+                    ₹650.00
                   </Text>
                   <Text style={{color: '#F76F44'}}>{'  '}20%</Text>
-                </View>
+                </Text>
                 <View
                   style={{
                     position: 'absolute',
