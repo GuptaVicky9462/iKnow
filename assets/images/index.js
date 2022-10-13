@@ -26,7 +26,7 @@ export const image = {
   menstrualcyclelengthicon: require('../../assets/images/menstrual-cycle-length-icon.png'),
   periodstartdate: require('../../assets/images/period-start-date.png'),
   processinggif: require('../../assets/images/PROCESSING.gif'),
-  trackcycleresult: require('../../assets/images/track-cycle-result.png'),
+  trackcycleresult: require('../../assets/images/track-cycle-result1.png'),
   trackcycleresultjpg: require('../../assets/images/track-cycle-result.jpg'),
   check: require('../../assets/images/check.png'),
   camera: require('../../assets/images/camera.png'),
