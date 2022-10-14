@@ -35,7 +35,7 @@ const OvulationTestStep2 = () => {
             <TouchableOpacity
               onPress={() => navigation.navigate('OvulationTestStep3')}
               style={{
-                width: '50%',
+                minWidth: '60%',
                 backgroundColor: '#EC187C',
                 borderRadius: 50,
                 paddingVertical: 10,
@@ -47,7 +47,7 @@ const OvulationTestStep2 = () => {
             <TouchableOpacity
               onPress={() => navigation.goBack()}
               style={{
-                width: '50%',
+                minWidth: '60%',
                 backgroundColor: '#EC187C',
                 borderRadius: 50,
                 paddingVertical: 10,

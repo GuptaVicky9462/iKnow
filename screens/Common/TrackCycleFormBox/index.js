@@ -29,14 +29,14 @@ const TrackCycleFormBox = ({
             paddingTop: 10,
           }}>
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
-            <Image style={{height: 55, width: 55}} source={icon} />
+            <Image style={{height: 45, width: 45}} source={icon} />
           </View>
           <View
             style={{
               paddingHorizontal: 15,
               width: '85%',
             }}>
-            <Text style={{fontSize: 16, fontWeight: 'bold', color: '#EC187C'}}>
+            <Text style={{fontSize: 18, fontWeight: 'bold', color: '#EC187C'}}>
               {title}
             </Text>
           </View>
