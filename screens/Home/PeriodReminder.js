@@ -67,8 +67,8 @@ export default function PeriodReminder() {
         style={{
           position: 'absolute',
           right: 0,
-          zIndex: 99,
-          top: -10,
+          zIndex: 10,
+          top: -15,
         }}>
         <Image
           source={image.periodHomeBanner}
