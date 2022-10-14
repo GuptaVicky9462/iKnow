@@ -34,6 +34,22 @@ export default function OvulationTestStep3(props) {
               source={image.ovulationtestingstep1}
             />
           </View>
+          <View
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: 15,
+              backgroundColor: '#ec187c',
+              paddingVertical: 8,
+              marginVertical: 15,
+            }}>
+            <Text style={{color: 'white', fontSize: 16, fontWeight: 'bold'}}>
+              Low
+            </Text>
+            <Text style={{color: 'white', fontSize: 14, fontWeight: '500'}}>
+              Chances of Pregnancy
+            </Text>
+          </View>
           {data?.map(element => {
             return (
               <TouchableOpacity

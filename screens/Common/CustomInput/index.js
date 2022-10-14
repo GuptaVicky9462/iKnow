@@ -14,7 +14,7 @@ const CustomInput = ({
       <TextInput
         value={text || value}
         mode="outlined"
-        outlineColor="grey"
+        outlineColor="#ced4da"
         placeholder={placeholder}
         style={{
           width: '85%',
@@ -25,7 +25,7 @@ const CustomInput = ({
           marginTop: 10,
         }}
         multiline={label == 'Address' ? true : false}
-        activeOutlineColor="grey"
+        activeOutlineColor="#ced4da"
         onChangeText={text => {
           setText(text);
           typeof setValue === 'function' && setValue(text);
