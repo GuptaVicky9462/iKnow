@@ -9,9 +9,26 @@ import {
 import {image} from '../../assets/images';
 import TrackCycleFormBox from '../Common/TrackCycleFormBox';
 import {useNavigation} from '@react-navigation/native';
+import moment from 'moment';
+import DateTimePickerModal from 'react-native-modal-datetime-picker';
 
 const OvulationTestStep2 = () => {
   const navigation = useNavigation();
+  const [isVisible, setIsVisible] = useState(true);
+  const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
+  const [date, setDate] = useState('');
+  const handleClick = () => {
+    setDatePickerVisibility(true);
+  };
+
+  const hideDatePicker = () => {
+    setDatePickerVisibility(false);
+  };
+
+  const handleConfirm = date => {
+    setDate(moment(date).format('MM/DD/YYYY'));
+    hideDatePicker();
+  };
   return (
     <>
       <ImageBackground style={{flex: 1}} source={image.loginbg}>
@@ -30,6 +47,15 @@ const OvulationTestStep2 = () => {
             placeholder="mm/dd/yyyy"
             title="Select start date of your last period."
             icon={image.periodstartdate}
+            isVisible={isVisible}
+            handleClick={handleClick}
+            value={date}
+          />
+          <DateTimePickerModal
+            isVisible={isDatePickerVisible}
+            mode="date"
+            onConfirm={handleConfirm}
+            onCancel={hideDatePicker}
           />
           <View style={{alignItems: 'center', paddingVertical: 15}}>
             <TouchableOpacity

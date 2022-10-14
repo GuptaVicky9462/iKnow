@@ -5,6 +5,7 @@ import {Routes} from '../../routes';
 import HomeStack from './HomeStack';
 import {useNavigation} from '@react-navigation/native';
 import Alert from '../Alerts';
+import {image} from '../../assets/images';
 
 const Drawer = createDrawerNavigator();
 const DrawerContent = props => {
@@ -22,11 +23,14 @@ const DrawerContent = props => {
         <View style={{flexDirection: 'row', padding: 20, alignItems: 'center'}}>
           <View
             style={{
-              height: 50,
-              width: 50,
-              borderWidth: 1,
-              marginRight: 10,
-            }}></View>
+              marginRight: 15,
+            }}>
+            <Image
+              style={{width: 50, height: 50, borderRadius: 100}}
+              resizeMode="contain"
+              source={image.Avatar}
+            />
+          </View>
           <Text style={{fontSize: 16, fontWeight: 'medium', color: '#222222'}}>
             Hello, Radhika
           </Text>

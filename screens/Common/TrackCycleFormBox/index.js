@@ -1,14 +1,19 @@
 import React from 'react';
-import {Image, Text, TextInput, View} from 'react-native';
+import {Image, Text, View} from 'react-native';
+import Feather from 'react-native-vector-icons/Feather';
+import {TextInput} from 'react-native-paper';
 
 const TrackCycleFormBox = ({
+  isVisible = false,
   value = '',
   setValue = null,
   placeholder = '',
   title = 'Title',
   icon = null,
+  handleClick = null,
 }) => {
   const [text, setText] = React.useState('');
+  console.log(isVisible);
   return (
     <>
       <View
@@ -42,24 +47,33 @@ const TrackCycleFormBox = ({
           </View>
         </View>
         <TextInput
-          style={{
-            paddingHorizontal: 15,
-            paddingVertical: 5,
-            marginTop: 16,
-            borderWidth: 1,
-            borderColor: '#ced4da',
-            // backgroundColor: '#ffffff',
-            borderRadius: 5,
-            fontSize: 16,
-          }}
-          outlineColor="grey"
-          activeOutlineColor="grey"
           placeholder={placeholder}
           value={text || value}
           onChangeText={text => {
             setText(text);
             typeof setValue === 'function' && setValue(text);
           }}
+          mode="outlined"
+          outlineColor="#ced4da"
+          style={{
+            width: '100%',
+            backgroundColor: 'white',
+            fontSize: 16,
+            color: 'black',
+            marginVertical: 10,
+          }}
+          editable={isVisible ? false : true}
+          activeOutlineColor="#ced4da"
+          right={
+            isVisible ? (
+              <TextInput.Icon
+                name={() => <Feather size={16} name="calendar" color="black" />}
+                onPress={() => {
+                  handleClick && handleClick();
+                }}
+              />
+            ) : null
+          }
         />
       </View>
     </>

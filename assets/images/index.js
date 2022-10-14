@@ -38,4 +38,5 @@ export const image = {
   cross1: require('../../assets/images/cross-1.png'),
   ovelationkitresult: require('../../assets/images/ovelation-kit-result.jpg'),
   trackcyclecalander3: require('../../assets/images/trackcycle-calander-3.png'),
+  Avatar: require('../images/user/Avatar.png'),
 };

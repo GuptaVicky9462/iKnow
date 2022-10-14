@@ -8,10 +8,27 @@ import {
 } from 'react-native';
 import {image} from '../../assets/images';
 import TrackCycleFormBox from '../Common/TrackCycleFormBox';
+import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import {useNavigation} from '@react-navigation/native';
+import moment from 'moment';
 
 const TrackCycleStep2 = () => {
   const navigation = useNavigation();
+  const [isVisible, setIsVisible] = useState(true);
+  const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
+  const [date, setDate] = useState('');
+  const handleClick = () => {
+    setDatePickerVisibility(true);
+  };
+
+  const hideDatePicker = () => {
+    setDatePickerVisibility(false);
+  };
+
+  const handleConfirm = date => {
+    setDate(moment(date).format('MM/DD/YYYY'));
+    hideDatePicker();
+  };
   return (
     <>
       <ImageBackground style={{flex: 1}} source={image.loginbg}>
@@ -27,9 +44,18 @@ const TrackCycleStep2 = () => {
             icon={image.menstrualcyclelengthicon}
           />
           <TrackCycleFormBox
+            isVisible={isVisible}
+            handleClick={handleClick}
+            value={date}
             placeholder="mm/dd/yyyy"
             title="Select start date of your last period."
             icon={image.periodstartdate}
+          />
+          <DateTimePickerModal
+            isVisible={isDatePickerVisible}
+            mode="date"
+            onConfirm={handleConfirm}
+            onCancel={hideDatePicker}
           />
           <View style={{alignItems: 'center', paddingVertical: 15}}>
             <TouchableOpacity
