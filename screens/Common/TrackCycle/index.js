@@ -32,11 +32,15 @@ export default function TrackCycle({
               justifyContent: 'space-between',
               backgroundColor: 'white',
               paddingVertical: 12,
-              paddingHorizontal: 25,
+              paddingHorizontal: 15,
+              width: '100%',
               borderRadius: 10,
               alignItems: 'center',
             }}>
-            <View style={{flex: 3, paddingHorizontal: 5}}>
+            <View
+              style={{
+                width: '65%',
+              }}>
               <Text
                 style={{fontSize: 18, fontWeight: 'bold', color: '#EC187C'}}>
                 {title}
@@ -47,7 +51,7 @@ export default function TrackCycle({
                 Click on the below tabs to check your previous result.
               </Text>
             </View>
-            <View style={{flex: 1, alignItems: 'center'}}>
+            <View style={{alignItems: 'center', minWidth: '30%'}}>
               <Image style={{width: 85, height: 85}} source={icon} />
             </View>
           </View>
@@ -67,7 +71,7 @@ export default function TrackCycle({
                 }}>
                 <View style={{justifyContent: 'center'}}>
                   <Image
-                    style={{height: 50, width: 50}}
+                    style={{height: 40, width: 40}}
                     source={image.calanderreport}
                   />
                 </View>
@@ -86,8 +90,9 @@ export default function TrackCycle({
                   <Text
                     numberOfLines={2}
                     style={{
-                      fontSize: 16,
+                      fontSize: 14,
                       paddingVertical: 5,
+                      color: '#222222',
                     }}>
                     {element.time}
                   </Text>

@@ -37,7 +37,7 @@ export default function UtiDetectionStep4(props) {
                 fontWeight: 'bold',
                 color: 'black',
               }}>
-              Day 2: 18 Aug 2022
+              Day: 18 Aug 2022
             </Text>
             <Text style={{paddingVertical: 3, fontSize: 16}}>
               Click Picture or upload from the device

@@ -20,8 +20,8 @@ export default function OvulationTestResult(props) {
           style={{padding: 16}}
           contentContainerStyle={{paddingBottom: 30}}>
           <View style={{alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{fontSize: 16, color: '#222222'}}>
-              Results: 18 Aug 2022
+            <Text style={{fontSize: 16, color: '#222222', fontWeight: '600'}}>
+              Results fo Day 2: 18 Aug 2022
             </Text>
           </View>
           <View style={{paddingVertical: 10, alignItems: 'center'}}>
@@ -35,7 +35,7 @@ export default function OvulationTestResult(props) {
             Positive: Two pink lines in C & T indicate the beginning of the
             fertile days
           </Text>
-          <Text style={{paddingVertical:10}}>
+          <Text style={{paddingVertical: 10}}>
             Negative: A single line in C indicates that the fertile days have
             not started. Invalid: No line on the kit indicates an invalid
             result. If so, test again using a fresh kit.
@@ -60,7 +60,15 @@ export default function OvulationTestResult(props) {
                 flexDirection: 'row',
                 justifyContent: 'center',
               }}>
-              <Text style={{fontSize: 16}}>SHARE RESULT</Text>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: '600',
+                  color: '#222222',
+                  marginRight: 5,
+                }}>
+                SHARE RESULT
+              </Text>
               <Image
                 source={image.share}
                 style={{height: 30, width: 30}}
@@ -70,7 +78,9 @@ export default function OvulationTestResult(props) {
           </View>
           {/*  */}
           <TouchableOpacity
-            onPress={() => props.navigation.navigate('OvulationConsolidatedResult')}
+            onPress={() =>
+              props.navigation.navigate('OvulationConsolidatedResult')
+            }
             style={{
               backgroundColor: '#ec187c',
               alignItems: 'center',
@@ -78,9 +88,10 @@ export default function OvulationTestResult(props) {
               paddingVertical: 10,
               borderRadius: 15,
               marginVertical: 20,
-
             }}>
-            <Text style={{fontSize: 16, color: 'white'}}>VIEW FULL RESULT</Text>
+            <Text style={{fontSize: 16, color: 'white', fontWeight: '600'}}>
+              VIEW FULL RESULT
+            </Text>
           </TouchableOpacity>
           {/*  */}
           <TouchableOpacity
@@ -92,7 +103,9 @@ export default function OvulationTestResult(props) {
               paddingVertical: 10,
               borderRadius: 15,
             }}>
-            <Text style={{fontSize: 16, color: 'white'}}>RETAKE TEST</Text>
+            <Text style={{fontSize: 16, color: 'white', fontWeight: '600'}}>
+              RETAKE TEST
+            </Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => props.navigation.navigate('OvulationDashbord')}
@@ -104,9 +117,10 @@ export default function OvulationTestResult(props) {
               marginVertical: 20,
               borderRadius: 15,
             }}>
-            <Text style={{fontSize: 16, color: 'white'}}>OVULATION DASHBORD</Text>
+            <Text style={{fontSize: 16, color: 'white', fontWeight: '600'}}>
+              OVULATION DASHBORD
+            </Text>
           </TouchableOpacity>
-          <LatestNews />
         </ScrollView>
       </ImageBackground>
     </>

@@ -77,6 +77,7 @@ export default function Question({handleyes, questions, handleback}) {
                 textAlign: 'center',
                 color: '#222222',
                 fontWeight: '700',
+                fontSize: 18,
               }}>
               {questions.qtext1}
             </Text>
@@ -85,6 +86,7 @@ export default function Question({handleyes, questions, handleback}) {
                 paddingVertical: 10,
                 textAlign: 'center',
                 color: 'black',
+                fontSize: 16,
               }}>
               {questions.qdescription1}
             </Text>

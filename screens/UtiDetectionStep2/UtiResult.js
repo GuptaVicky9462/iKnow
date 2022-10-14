@@ -20,7 +20,7 @@ export default function UtiResult(props) {
           style={{padding: 16}}
           contentContainerStyle={{paddingBottom: 30}}>
           <View style={{alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{fontSize: 16, color: '#222222'}}>
+            <Text style={{fontSize: 16, color: '#222222', fontWeight: '600'}}>
               Results: 18 Aug 2022
             </Text>
           </View>
@@ -31,14 +31,16 @@ export default function UtiResult(props) {
               resizeMode="contain"
             />
           </View>
-          <Text style={{paddingVertical:10}}>
+          <Text
+            style={{paddingVertical: 10, color: '#777777', fontWeight: '500'}}>
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </Text>
-          <Text style={{paddingVertical:10}}>
+          <Text
+            style={{paddingVertical: 10, color: '#777777', fontWeight: '500'}}>
             Tellus in hac habitasse platea dictumst vestibulum rhoncus est.
             Interdum varius sit amet mattis vulputate enim nulla aliquet
             porttitor. Egestas diam in arcu cursus euismod quis viverra nibh.
@@ -62,7 +64,15 @@ export default function UtiResult(props) {
                 flexDirection: 'row',
                 justifyContent: 'center',
               }}>
-              <Text style={{fontSize: 16}}>SHARE RESULT</Text>
+              <Text
+                style={{
+                  fontSize: 16,
+                  color: '#222222',
+                  fontWeight: '600',
+                  marginRight: 5,
+                }}>
+                SHARE RESULT
+              </Text>
               <Image
                 source={image.share}
                 style={{height: 30, width: 30}}
