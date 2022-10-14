@@ -25,7 +25,7 @@ const MenopauseStep2 = () => {
             <TouchableOpacity
               onPress={() => navigation.navigate('Assesment')}
               style={{
-                width: '50%',
+                minWidth: '60%',
                 backgroundColor: '#EC187C',
                 borderRadius: 50,
                 paddingVertical: 10,
@@ -37,7 +37,7 @@ const MenopauseStep2 = () => {
             <TouchableOpacity
               onPress={() => navigation.goBack()}
               style={{
-                width: '50%',
+                minWidth: '60%',
                 backgroundColor: '#EC187C',
                 borderRadius: 50,
                 paddingVertical: 10,

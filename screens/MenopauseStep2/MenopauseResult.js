@@ -64,7 +64,15 @@ export default function MenopauseResult(props) {
                 flexDirection: 'row',
                 justifyContent: 'center',
               }}>
-              <Text style={{fontSize: 16}}>SHARE RESULT</Text>
+              <Text
+                style={{
+                  fontSize: 16,
+                  color: '#222222',
+                  marginRight: 5,
+                  fontWeight: '600',
+                }}>
+                SHARE RESULT
+              </Text>
               <Image
                 source={image.share}
                 style={{height: 30, width: 30}}
@@ -81,7 +89,9 @@ export default function MenopauseResult(props) {
               paddingVertical: 10,
               borderRadius: 15,
             }}>
-            <Text style={{fontSize: 16, color: 'white'}}>RETAKE TEST</Text>
+            <Text style={{fontSize: 16, color: 'white', fontWeight: '600'}}>
+              RETAKE TEST
+            </Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => props.navigation.navigate('MenopauseDashbord')}
@@ -93,7 +103,7 @@ export default function MenopauseResult(props) {
               marginVertical: 20,
               borderRadius: 15,
             }}>
-            <Text style={{fontSize: 16, color: 'white'}}>
+            <Text style={{fontSize: 16, color: 'white', fontWeight: '600'}}>
               MENOPAUSE DASHBORD
             </Text>
           </TouchableOpacity>

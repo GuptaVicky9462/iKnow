@@ -9,15 +9,15 @@ const data = [
   },
   {
     name: 'Negative',
-    time: '12-Sep-2022',
+    time: '11-Aug-2022',
   },
   {
     name: 'Positive',
-    time: '12-Sep-2022',
+    time: '10-Jun-2022',
   },
   {
     name: 'Negative',
-    time: '12-Sep-2022',
+    time: '08-May-2022',
   },
 ];
 export default function OvulationDashbord(props) {
