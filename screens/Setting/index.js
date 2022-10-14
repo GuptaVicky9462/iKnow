@@ -77,7 +77,7 @@ const Setting = () => {
       <ImageBackground style={{flex: 1}} source={image.loginbg}>
         <ScrollView style={{paddingHorizontal: 10}}>
           <View style={{paddingVertical: 10}}>
-            <Text style={{fontSize: 21, fontWeight: '700', color: '#222222'}}>
+            <Text style={{fontSize: 21, fontWeight: '600', color: '#222222'}}>
               Settings
             </Text>
           </View>
@@ -88,10 +88,8 @@ const Setting = () => {
               marginVertical: 15,
             }}>
             <View>
-              <Text style={{fontSize: 16, color: '#222222'}}>
-                Notifications
-              </Text>
-              <Text style={{color: '#647589'}}>All the notifications</Text>
+              <Text style={{fontSize: 16, color: '#222222'}}>Notification</Text>
+              <Text style={{color: '#647589'}}>All the notification.</Text>
             </View>
             <View>
               <SwitchToggle
@@ -179,7 +177,7 @@ const Setting = () => {
                     <Text
                       style={{
                         fontSize: 17,
-                        fontWeight: '700',
+                        fontWeight: '600',
                         color: '#222222',
                       }}>
                       {item.title}
