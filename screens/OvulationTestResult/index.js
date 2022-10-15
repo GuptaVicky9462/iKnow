@@ -51,10 +51,10 @@ export default function OvulationTestResult(props) {
             }}>
             <TouchableOpacity
               style={{
-                paddingVertical: 10,
+                paddingVertical: 15,
                 width: '80%',
                 alignItems: 'center',
-                borderRadius: 10,
+                borderRadius: 26,
                 borderColor: '#ec187c',
                 borderWidth: 1,
                 flexDirection: 'row',
@@ -62,21 +62,20 @@ export default function OvulationTestResult(props) {
               }}>
               <Text
                 style={{
-                  fontSize: 16,
+                  fontSize: 18,
                   fontWeight: '600',
                   color: '#222222',
-                  marginRight: 5,
+                  marginRight: 10,
                 }}>
                 SHARE RESULT
               </Text>
               <Image
                 source={image.share}
-                style={{height: 30, width: 30}}
+                style={{height: 35, width: 35}}
                 resizeMode="contain"
               />
             </TouchableOpacity>
           </View>
-          {/*  */}
           <TouchableOpacity
             onPress={() =>
               props.navigation.navigate('OvulationConsolidatedResult')

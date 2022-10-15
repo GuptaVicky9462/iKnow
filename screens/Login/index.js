@@ -8,6 +8,7 @@ import {
 import React, {useState} from 'react';
 import {TextInput} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
+import CustomInput from '../Common/CustomInput';
 
 const Login = () => {
   const [text, setText] = useState('');
@@ -27,20 +28,7 @@ const Login = () => {
           resizeMode="cover"
         />
       </View>
-
-      <TextInput
-        label="Enter Your Mobile Number"
-        value={text}
-        mode="outlined"
-        outlineColor="white"
-        style={{
-          width: '80%',
-          alignSelf: 'center',
-          backgroundColor: '#ec187c',
-        }}
-        activeOutlineColor="white"
-        onChangeText={text => setText(text)}
-      />
+      <CustomInput label="Enter Your Mobile Number" placeholder="Mobile" />
       <TouchableOpacity
         onPress={() => navigation.navigate('Otp')}
         style={{

@@ -1,4 +1,4 @@
-import {Text, TouchableOpacity, Image, ScrollView} from 'react-native';
+import {Text, TouchableOpacity, Image, Linking, ScrollView} from 'react-native';
 import {image} from '../../assets/images/index';
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
@@ -32,6 +32,13 @@ const TabData = [
 
 export default function ScrollTab() {
   const navigation = useNavigation();
+  const clickOnTab = item => {
+    if (item.name == 'Help') {
+      Linking.openURL(`tel:${'1800-229-898'}`);
+    } else {
+      navigation.navigate(item.navigate);
+    }
+  };
   return (
     <ScrollView
       horizontal={true}
@@ -44,7 +51,7 @@ export default function ScrollTab() {
       {TabData?.map(item => {
         return (
           <TouchableOpacity
-            onPress={() => navigation.navigate(item.navigate)}
+            onPress={() => clickOnTab(item)}
             style={{alignItems: 'center', paddingHorizontal: 7}}>
             <Image source={item.icon} style={{height: 60, width: 60}} />
             <Text style={{color: '#222222'}}>{item.name}</Text>

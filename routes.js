@@ -31,7 +31,7 @@ export const Routes = [
     icon: image.menopause,
   },
   {
-    label: 'Setting',
+    label: 'Settings',
     route: 'Setting',
     icon: image.setting,
   },

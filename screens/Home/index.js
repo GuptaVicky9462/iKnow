@@ -37,12 +37,13 @@ import Logout from '../Logout';
 import OvulationConsolidatedResult from '../OvulationTestStep5/OvulationConsolidatedResult';
 import OvulationQuestion2 from '../OvulationQuestion2';
 import OvulationQuestion3 from '../OvulationQuestion3/OvulationQuestion3';
+import Calandar from '../Calandar';
 const Stack = createNativeStackNavigator();
 
 export default function Home() {
   return (
     <>
-      <Stack.Navigator initialRouteName="MainHome">
+      <Stack.Navigator initialRouteName="Calandar">
         <Stack.Screen
           name="MainHome"
           component={MainHome}
@@ -51,6 +52,11 @@ export default function Home() {
         <Stack.Screen
           name="Assesment"
           component={Assesment}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Calandar"
+          component={Calandar}
           options={{headerShown: false}}
         />
 

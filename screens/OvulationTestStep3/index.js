@@ -40,7 +40,7 @@ export default function OvulationTestStep3(props) {
               justifyContent: 'center',
               borderRadius: 15,
               backgroundColor: '#ec187c',
-              paddingVertical: 8,
+              paddingVertical: 10,
               marginVertical: 15,
             }}>
             <Text style={{color: 'white', fontSize: 16, fontWeight: 'bold'}}>

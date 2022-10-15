@@ -11,7 +11,6 @@ export default function Couresel({item, index}) {
         borderRadius: 10,
         overflow: 'hidden',
         justifyContent: 'center',
-        backgroundColor: 'red',
       }}>
       <Image
         style={{width: 'auto', resizeMode: 'contain'}}

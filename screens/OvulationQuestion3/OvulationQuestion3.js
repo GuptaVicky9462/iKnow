@@ -17,7 +17,6 @@ export default function OvulationQuestion3() {
           paddingBottom: 30,
           padding: 15,
           alignItems: 'center',
-          //   flex: 1,
         }}>
         <Text
           style={{
@@ -28,7 +27,6 @@ export default function OvulationQuestion3() {
           }}>
           Select Start Date Of Your Last Period.
         </Text>
-
         <Image
           source={image.trackcyclecalander3}
           style={{width: '100%', height: 600, marginVertical: 10}}
