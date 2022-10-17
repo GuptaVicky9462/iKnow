@@ -43,7 +43,7 @@ const Stack = createNativeStackNavigator();
 export default function Home() {
   return (
     <>
-      <Stack.Navigator initialRouteName="Calandar">
+      <Stack.Navigator initialRouteName="MainHome">
         <Stack.Screen
           name="MainHome"
           component={MainHome}

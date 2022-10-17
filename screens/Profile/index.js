@@ -144,7 +144,6 @@ const Profile = () => {
               <TextInput.Icon
                 name={() => <Feather size={16} name="calendar" color="black" />}
                 onPress={() => {
-                  console.log('sdf');
                   showDatePicker();
                 }}
               />
