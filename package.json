@@ -21,6 +21,7 @@
     "moment": "^2.29.4",
     "react": "18.1.0",
     "react-native": "0.70.2",
+    "react-native-big-calendar": "^3.3.0",
     "react-native-calendars": "^1.1289.0",
     "react-native-check-box": "^2.1.7",
     "react-native-gesture-handler": "^2.7.0",
