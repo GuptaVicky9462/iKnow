@@ -7,7 +7,6 @@ import {image} from '../../assets/images';
 
 export default function Shop() {
   const [isActive, setIsActive] = React.useState([]);
-  console.log('vvvvvvvv', isActive);
   return (
     <>
       <Text
@@ -102,7 +101,7 @@ export default function Shop() {
                     borderRadius: 50,
                     padding: 8,
                   }}>
-                  {isActive.filter(el => el.id == item.id).length ? (
+                  {isActive.filter(el => el.id == item.id)[0]?.id == item.id ? (
                     <FontAwesome size={15} name="heart" color="#f76f44" />
                   ) : (
                     <Feather size={15} name="heart" />

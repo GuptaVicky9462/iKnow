@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import {image} from '../../assets/images';
+import CommonCalendar from '../Common/CommonCalendar';
 
 const data = [
   {
@@ -81,18 +82,7 @@ export default function TrackCycleResult(props) {
               </TouchableOpacity>
             );
           })}
-          <View>
-            <Image
-              resizeMode="contain"
-              style={{
-                width: '100%',
-                height: 600,
-                borderRadius: 10,
-                marginVertical: 20,
-              }}
-              source={image.trackcycleresultjpg}
-            />
-          </View>
+          <CommonCalendar />
         </ScrollView>
       </ImageBackground>
     </>
