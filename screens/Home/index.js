@@ -37,7 +37,7 @@ import Logout from '../Logout';
 import OvulationConsolidatedResult from '../OvulationTestStep5/OvulationConsolidatedResult';
 import OvulationQuestion2 from '../OvulationQuestion2';
 import OvulationQuestion3 from '../OvulationQuestion3/OvulationQuestion3';
-import Calandar from '../Calandar';
+import Calendar from '../Calendar';
 const Stack = createNativeStackNavigator();
 
 export default function Home() {
@@ -55,8 +55,8 @@ export default function Home() {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="Calandar"
-          component={Calandar}
+          name="Calendar"
+          component={Calendar}
           options={{headerShown: false}}
         />
 

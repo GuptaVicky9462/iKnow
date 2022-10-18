@@ -5,7 +5,7 @@ import Home from '../../../screens/Home';
 import Setting from '../../Setting';
 import Profile from '../../Profile';
 import Header from './Header';
-import Calendar from '../../Calandar';
+import Calendar from '../../Calendar';
 import Feather from 'react-native-vector-icons/Feather';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
