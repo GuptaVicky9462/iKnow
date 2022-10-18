@@ -393,7 +393,7 @@ const styles = StyleSheet.create({
   },
   tableRow: {
     flexDirection: 'row',
-    paddingHorizontal: 17,
+    paddingHorizontal: 15,
   },
   tableHeaderRow: {
     flexDirection: 'row',
@@ -410,7 +410,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.2,
     borderColor: 'lightgrey',
     height: 80,
-    width: 45,
+    width: '14.2%',
   },
   dayCellTextInactive: {
     alignSelf: 'flex-end',
@@ -424,7 +424,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.2,
     borderColor: 'lightgrey',
     height: 80,
-    width: 45,
+    width: '14.2%',
   },
   dayCellTextActive: {
     fontSize: 15,
