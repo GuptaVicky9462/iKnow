@@ -8,7 +8,8 @@ export default function PeriodReminder() {
       style={{
         backgroundColor: '#EDEFF4',
         position: 'relative',
-        padding: 20,
+        paddingHorizontal: 20,
+        paddingVertical: 10,
         marginVertical: 20,
       }}>
       <View>
@@ -72,7 +73,7 @@ export default function PeriodReminder() {
         }}>
         <Image
           source={image.periodHomeBanner}
-          style={{height: 190, width: 190}}
+          style={{height: 150, width: 150}}
         />
       </View>
     </View>
