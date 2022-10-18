@@ -2,7 +2,7 @@ import {image} from './assets/images/index';
 export const Routes = [
   {
     label: 'Dashbord',
-    route: 'Home',
+    route: 'MainHome',
     icon: image.home,
   },
   {

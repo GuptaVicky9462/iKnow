@@ -103,13 +103,13 @@ const CompleteProfile = () => {
             outlineColor="#ced4da"
             activeOutlineColor="#ced4da"
             value={gender}
-            right={
-              <TextInput.Icon
-                name={() => (
-                  <Feather size={16} name="chevron-down" color="black" />
-                )}
-              />
-            }
+            // right={
+            //   <TextInput.Icon
+            //     name={() => (
+            //       <Feather size={16} name="chevron-down" color="black" />
+            //     )}
+            //   />
+            // }
           />
           <View
             style={{
@@ -120,7 +120,7 @@ const CompleteProfile = () => {
               padding: 6,
               left: 25,
             }}>
-            <Text style={{color: 'white'}}>Gender</Text>
+            <Text style={{color: 'white'}}> Select Gender</Text>
           </View>
         </ModalSelector>
         <ModalSelector
@@ -146,13 +146,13 @@ const CompleteProfile = () => {
             outlineColor="#ced4da"
             activeOutlineColor="#ced4da"
             value={state}
-            right={
-              <TextInput.Icon
-                name={() => (
-                  <Feather size={16} name="chevron-down" color="black" />
-                )}
-              />
-            }
+            // right={
+            //   <TextInput.Icon
+            //     name={() => (
+            //       <Feather size={16} name="chevron-down" color="black" />
+            //     )}
+            //   />
+            // }
           />
           <View
             style={{
@@ -189,13 +189,13 @@ const CompleteProfile = () => {
             outlineColor="#ced4da"
             activeOutlineColor="#ced4da"
             value={city}
-            right={
-              <TextInput.Icon
-                name={() => (
-                  <Feather size={16} name="chevron-down" color="black" />
-                )}
-              />
-            }
+            // right={
+            //   <TextInput.Icon
+            //     name={() => (
+            //       <Feather size={16} name="chevron-down" color="black" />
+            //     )}
+            //   />
+            // }
           />
           <View
             style={{
@@ -213,7 +213,7 @@ const CompleteProfile = () => {
         <TouchableOpacity
           onPress={() => navigation.navigate('Term_Condition')}
           style={{
-            width: '50%',
+            width: '60%',
             alignSelf: 'center',
             paddingVertical: 12,
             backgroundColor: '#EC187C',

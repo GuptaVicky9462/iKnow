@@ -192,8 +192,6 @@ export default function OvulationConsolidatedResult(props) {
         contentContainerStyle={{
           paddingBottom: 30,
           paddingHorizontal: 15,
-          //   backgroundColor: '',
-          flex: 1,
         }}>
         <Text
           style={{

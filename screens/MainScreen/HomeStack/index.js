@@ -33,11 +33,13 @@ const HomeStack = props => {
           tabBarLabel: 'HOME',
           tabBarActiveTintColor: '#F76F44',
           tabBarIcon: ({focused}) => (
-            <Feather
-              name="home"
-              size={20}
-              color={focused ? '#F76F44' : 'black'}
-            />
+            <TouchableOpacity onPress={() => navigation.navigate('MainHome')}>
+              <Feather
+                name="home"
+                size={20}
+                color={focused ? '#F76F44' : 'black'}
+              />
+            </TouchableOpacity>
           ),
         }}
       />

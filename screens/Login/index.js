@@ -13,6 +13,8 @@ import CustomInput from '../Common/CustomInput';
 const Login = () => {
   const [text, setText] = useState('');
   const navigation = useNavigation();
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <ImageBackground
       source={require('../../assets/images/login-bg.png')}
@@ -28,7 +30,39 @@ const Login = () => {
           resizeMode="cover"
         />
       </View>
-      <CustomInput label="Enter Your Mobile Number" placeholder="Mobile" />
+      <View style={{alignItems: 'center'}}>
+        <TextInput
+          onBlur={() => setIsActive(false)}
+          onFocus={() => setIsActive(true)}
+          style={{
+            width: '85%',
+            backgroundColor: isActive ? '#ffffff' : '#ec187c',
+            fontSize: 16,
+            color: 'black',
+            marginVertical: 10,
+            marginTop: 10,
+          }}
+          mode="outlined"
+          outlineColor="#ffffff"
+          activeOutlineColor="#ced4da"
+          value={text}
+          placeholder="Mobile"
+          onChangeText={text => {
+            setText(text);
+          }}
+        />
+        <View
+          style={{
+            backgroundColor: '#ec187c',
+            width: 'auto',
+            maxWidth: '100%',
+            position: 'absolute',
+            padding: 6,
+            left: 50,
+          }}>
+          <Text style={{color: 'white'}}>Enter Your Mobile Number</Text>
+        </View>
+      </View>
       <TouchableOpacity
         onPress={() => navigation.navigate('Otp')}
         style={{

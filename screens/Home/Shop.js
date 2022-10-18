@@ -1,10 +1,13 @@
-import {View, Text, Image, ScrollView} from 'react-native';
+import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
 import React from 'react';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import {Rating} from 'react-native-ratings';
 import {image} from '../../assets/images';
 
 export default function Shop() {
+  const [isActive, setIsActive] = React.useState([]);
+  console.log('vvvvvvvv', isActive);
   return (
     <>
       <Text
@@ -18,7 +21,12 @@ export default function Shop() {
         Shop Now
       </Text>
       <ScrollView horizontal={true}>
-        {[0, 1, 3].map((item, index) => {
+        {[
+          {name: 'name1', id: 0},
+          {name: 'name2', id: 1},
+          {name: 'name3', id: 2},
+        ].map((item, index) => {
+          console.log('isActive[item.id]', isActive[item.id]?.name);
           return (
             <>
               <View
@@ -70,7 +78,21 @@ export default function Shop() {
                   </Text>
                   <Text style={{color: '#F76F44'}}>{'  '}20%</Text>
                 </Text>
-                <View
+                <TouchableOpacity
+                  onPress={() => {
+                    const filter = isActive.filter((ite, index) => {
+                      return ite.id == item.id;
+                    });
+                    const excluded = isActive.filter((ite, index) => {
+                      return ite.id !== item.id;
+                    });
+
+                    if (filter.length > 0) {
+                      setIsActive([...excluded]);
+                    } else {
+                      setIsActive([...excluded, item]);
+                    }
+                  }}
                   style={{
                     position: 'absolute',
                     backgroundColor: 'white',
@@ -80,8 +102,12 @@ export default function Shop() {
                     borderRadius: 50,
                     padding: 8,
                   }}>
-                  <Feather size={15} name="heart" color="black" />
-                </View>
+                  {isActive.filter(el => el.id == item.id).length ? (
+                    <FontAwesome size={15} name="heart" color="#f76f44" />
+                  ) : (
+                    <Feather size={15} name="heart" />
+                  )}
+                </TouchableOpacity>
               </View>
             </>
           );
