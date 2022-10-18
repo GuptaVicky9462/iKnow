@@ -79,7 +79,7 @@ const HomeStack = props => {
         name="Setting"
         component={Setting}
         options={{
-          tabBarLabel: 'SETTING',
+          tabBarLabel: 'SETTINGS',
           tabBarActiveTintColor: '#F76F44',
 
           tabBarIcon: ({focused}) => (

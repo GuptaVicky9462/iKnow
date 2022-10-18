@@ -62,13 +62,14 @@ export default function CommonCalendar() {
               style={{
                 backgroundColor: '#fcd8e2',
                 paddingVertical: 5,
+                alignItems: 'center',
                 paddingHorizontal: 1,
                 marginVertical: 5,
               }}>
               <Text
                 numberOfLines={1}
                 style={{
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: 'bold',
                   color: '#d80a44',
                 }}>
@@ -82,13 +83,14 @@ export default function CommonCalendar() {
               style={{
                 backgroundColor: '#fcd8e2',
                 paddingVertical: 5,
+                alignItems: 'center',
                 paddingHorizontal: 1,
                 marginVertical: 5,
               }}>
               <Text
                 numberOfLines={1}
                 style={{
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: 'bold',
                   color: '#d80a44',
                 }}></Text>
@@ -100,13 +102,14 @@ export default function CommonCalendar() {
               style={{
                 backgroundColor: '#fcd8e2',
                 paddingVertical: 5,
+                alignItems: 'center',
                 paddingHorizontal: 1,
                 marginVertical: 5,
               }}>
               <Text
                 numberOfLines={1}
                 style={{
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: 'bold',
                   color: '#d80a44',
                 }}></Text>
@@ -118,13 +121,14 @@ export default function CommonCalendar() {
               style={{
                 backgroundColor: '#fcd8e2',
                 paddingVertical: 5,
+                alignItems: 'center',
                 paddingHorizontal: 1,
                 marginVertical: 5,
               }}>
               <Text
                 numberOfLines={1}
                 style={{
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: 'bold',
                   color: '#d80a44',
                 }}></Text>
@@ -136,13 +140,14 @@ export default function CommonCalendar() {
               style={{
                 backgroundColor: '#fcd8e2',
                 paddingVertical: 5,
+                alignItems: 'center',
                 paddingHorizontal: 1,
                 marginVertical: 5,
               }}>
               <Text
                 numberOfLines={1}
                 style={{
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: 'bold',
                   color: '#d80a44',
                 }}></Text>
@@ -174,13 +179,14 @@ export default function CommonCalendar() {
               style={{
                 backgroundColor: '#fff0e9',
                 paddingVertical: 5,
+                alignItems: 'center',
                 paddingHorizontal: 1,
                 marginVertical: 5,
               }}>
               <Text
                 numberOfLines={1}
                 style={{
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: 'bold',
                   color: '#f66d18',
                 }}>
@@ -194,13 +200,14 @@ export default function CommonCalendar() {
               style={{
                 backgroundColor: '#fff0e9',
                 paddingVertical: 5,
+                alignItems: 'center',
                 paddingHorizontal: 1,
                 marginVertical: 5,
               }}>
               <Text
                 numberOfLines={1}
                 style={{
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: 'bold',
                   color: '#cd943d',
                 }}></Text>
@@ -214,13 +221,14 @@ export default function CommonCalendar() {
               style={{
                 backgroundColor: '#fff0e9',
                 paddingVertical: 5,
+                alignItems: 'center',
                 paddingHorizontal: 1,
                 marginVertical: 5,
               }}>
               <Text
                 numberOfLines={1}
                 style={{
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: 'bold',
                   color: '#f66d18',
                 }}></Text>
@@ -232,13 +240,14 @@ export default function CommonCalendar() {
               style={{
                 backgroundColor: '#fff0e9',
                 paddingVertical: 5,
+                alignItems: 'center',
                 paddingHorizontal: 1,
                 marginVertical: 5,
               }}>
               <Text
                 numberOfLines={1}
                 style={{
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: 'bold',
                   color: '#f66d18',
                 }}></Text>
@@ -250,13 +259,14 @@ export default function CommonCalendar() {
               style={{
                 backgroundColor: '#fff0e9',
                 paddingVertical: 5,
+                alignItems: 'center',
                 paddingHorizontal: 1,
                 marginVertical: 5,
               }}>
               <Text
                 numberOfLines={1}
                 style={{
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: 'bold',
                   color: '#f66d18',
                 }}>
@@ -313,13 +323,14 @@ export default function CommonCalendar() {
               style={{
                 backgroundColor: '#fcd8e2',
                 paddingVertical: 5,
+                alignItems: 'center',
                 paddingHorizontal: 1,
                 marginVertical: 5,
               }}>
               <Text
                 numberOfLines={1}
                 style={{
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: 'bold',
                   color: '#d80a44',
                 }}>
