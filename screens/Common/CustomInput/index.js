@@ -23,6 +23,8 @@ const CustomInput = ({
           color: 'black',
           marginVertical: 10,
           marginTop: 10,
+          paddingTop: label == 'Address' ? 10 : 0,
+          minHeight: label == 'Address' ? 100 : 0,
         }}
         multiline={label == 'Address' ? true : false}
         activeOutlineColor="#ced4da"
